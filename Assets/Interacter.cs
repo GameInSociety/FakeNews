@@ -32,14 +32,20 @@ public class Interacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!holdingItem && !CameraBehavior.Instance.takingPhoto)
+        if (!holdingItem )
         {
+            if (CameraBehavior.Instance.takingPhoto) {
+                if (inside)
+                    HideReticle();
+                return;
+
+            }
             var ray = new Ray(transform.position, transform.forward);
             var hit = new RaycastHit();
             if (Physics.Raycast(ray, out hit, 100f))
             {
                 var interactable = hit.collider.GetComponent<Interactable>();
-                if (interactable != null)
+                if (interactable != null && interactable.able)
                 {
                     if (!inside) {
                         inside = true;
