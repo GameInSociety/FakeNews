@@ -27,10 +27,10 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.193
+    value: 0.455
   smoothness:
     overrideState: 1
-    value: 0.2
+    value: 0.135
   roundness:
     overrideState: 0
     value: 1
@@ -59,10 +59,10 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 1
+    value: 0
   filtering:
-    overrideState: 0
-    value: {x: 50, y: 95}
+    overrideState: 1
+    value: {x: 53.999985, y: 99}
   minLuminance:
     overrideState: 0
     value: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   keyValue:
-    overrideState: 0
+    overrideState: 1
     value: 1
   eyeAdaptation:
     overrideState: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
     value: 0
   intensity:
     overrideState: 1
-    value: 0.25
+    value: 0.64
   color:
     overrideState: 0
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -183,8 +183,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0.25
   quality:
-    overrideState: 0
-    value: 2
+    overrideState: 1
+    value: 4
 --- !u!114 &6484830494139391111
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -202,14 +202,14 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   colored:
-    overrideState: 0
+    overrideState: 1
     value: 1
   intensity:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 0.438
   size:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 0.97
   lumContrib:
-    overrideState: 0
+    overrideState: 1
     value: 0.8
