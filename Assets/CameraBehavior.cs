@@ -11,6 +11,8 @@ public class CameraBehavior : MonoBehaviour
     public delegate void OnTakePicture();
     public OnTakePicture onTakePicture;
 
+    public AudioSource source;
+
     public int resWidth = 2550;
     public int resHeight = 3300;
 
@@ -56,9 +58,8 @@ public class CameraBehavior : MonoBehaviour
     }
 
     void Camera_Update() {
-        if (Input.GetKeyDown(KeyCode.T) && !tookPhoto) {
+        if (Input.GetKeyDown(KeyCode.T) && !tookPhoto)
             TakePicture();
-        }
     }
 
     void Camera_Exit() {
@@ -68,6 +69,7 @@ public class CameraBehavior : MonoBehaviour
 
     void TakePicture() {
         takeHiResShot = true;
+        source.Play();
     }
 
     void LateUpdate() {
