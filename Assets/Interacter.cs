@@ -16,6 +16,7 @@ public class Interacter : MonoBehaviour
     public GameObject reticle_group;
     public CanvasGroup reticle_cg;
     bool selected = false;
+    public Interactable overring;
 
     private void Awake()
     {
@@ -54,7 +55,7 @@ public class Interacter : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 100f)) {
             var interactable = hit.collider.GetComponent<Interactable>();
             if (interactable != null && interactable.able) {
-                Select();
+                Select(interactable);
                 if (Input.GetMouseButtonDown(0))
                     PickUpItem(interactable.transform);
             } else {
@@ -65,21 +66,22 @@ public class Interacter : MonoBehaviour
         Deselect();
     }
 
-    void Select() {
+    void Select(Interactable i) {
         if (selected)
             return;
+        overring = i;
+        i.gameObject.layer = 7;
         selected = true;
         ShowReticle();
-        gameObject.layer = 7;
-        Debug.Log($"selcte");
     }
 
     void Deselect() {
         if (!selected)
             return;
+        if (overring != null)
+            overring.gameObject.layer = 0;
         selected = false;
         HideReticle();
-        gameObject.layer = 0;
         Debug.Log($"deselect");
 
     }
