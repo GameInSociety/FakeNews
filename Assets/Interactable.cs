@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour {
     public Vector3 testV;
+    public bool able = true;
     // Start is called before the first frame update
     void Start() {
         CameraBehavior.Instance.onTakePicture += Test;
