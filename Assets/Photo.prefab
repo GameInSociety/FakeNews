@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 6955973410323498272}
   - component: {fileID: 6955973410323498273}
   - component: {fileID: 6955973410323498274}
-  - component: {fileID: 2207478857142179922}
+  - component: {fileID: -1926549816259851946}
   m_Layer: 0
   m_Name: Photo
   m_TagString: Untagged
@@ -158,12 +158,12 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2207478857142179922
+--- !u!114 &-1926549816259851946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,9 +172,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6955973410323498279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04263a4c128794660a38e89b08f60d90, type: 3}
+  m_Script: {fileID: 11500000, guid: bb24d6eb1ae8e4000a37dc9828562038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testV: {x: 0, y: 0, z: 0}
+  infos: []
 --- !u!1 &6955973410710767387
 GameObject:
   m_ObjectHideFlags: 0

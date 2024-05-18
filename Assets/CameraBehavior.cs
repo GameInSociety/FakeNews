@@ -4,10 +4,12 @@ using UnityEngine;
 using DG.Tweening;
 public class CameraBehavior : MonoBehaviour
 {
-    bool takingPhoto = false;
-    bool holdingPhoto = false;
-
+    public static CameraBehavior Instance;
+    public bool takingPhoto = false;
     bool tookPhoto = false;
+
+    public delegate void OnTakePicture();
+    public OnTakePicture onTakePicture;
 
     public int resWidth = 2550;
     public int resHeight = 3300;
@@ -20,16 +22,19 @@ public class CameraBehavior : MonoBehaviour
     public Transform photo_target;
     public GameObject photo_prefab;
 
-    public MeshRenderer test;
-
     public Animator _animator;
 
     Texture2D texture;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && !holdingPhoto) {
+        if (Input.GetKeyDown(KeyCode.C) && !Interacter.Instance.holdingItem) {
             if (takingPhoto) {
                 Camera_Exit();
             } else {
@@ -41,19 +46,7 @@ public class CameraBehavior : MonoBehaviour
             Camera_Update();
         }
 
-        if (holdingPhoto && Input.GetKeyDown(KeyCode.T)) {
-            ThrowPhoto();
-        }
 
-
-    }
-
-    void ThrowPhoto() {
-        photo_instance.GetComponent<Rigidbody>().isKinematic = false;
-        photo_instance.GetComponent<Rigidbody>().useGravity = true;
-        photo_instance.GetComponent<Rigidbody>().AddForce(transform.forward * photo_force);
-        photo_instance.transform.parent = null;
-        holdingPhoto = false;
     }
 
     void Camera_Start() {
@@ -71,8 +64,6 @@ public class CameraBehavior : MonoBehaviour
     void Camera_Exit() {
         takingPhoto = false;
         _animator.SetTrigger("exit");
-
-        
     }
 
     void TakePicture() {
@@ -89,16 +80,15 @@ public class CameraBehavior : MonoBehaviour
     }
 
     void delay() {
-
         Camera_Exit();
-        photo_instance = Instantiate(photo_prefab, transform);
+        photo_instance = Instantiate(photo_prefab, null);
         photo_instance.GetComponentsInChildren<MeshRenderer>()[1].material.mainTexture = texture;
-        photo_instance.transform.DOMove(photo_target.position, 0.5f);
-        photo_instance.transform.DORotateQuaternion(photo_target.rotation, 0.5f);
 
+        Interacter.Instance.PickUpItem(photo_instance.transform);
 
-
-        holdingPhoto = true;
+        if (onTakePicture != null) {
+            onTakePicture();
+        }
     }
 
     private static Texture2D GetTextureFromCamera(Camera mCamera) {
