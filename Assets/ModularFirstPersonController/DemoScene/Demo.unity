@@ -419,6 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testV: {x: 0, y: 0, z: 0}
+  able: 1
 --- !u!135 &31362039
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1635,6 +1636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testV: {x: 0, y: 0, z: 0}
+  able: 1
 --- !u!135 &630496128
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2487,6 +2489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testV: {x: 0, y: 0, z: 0}
+  able: 1
 --- !u!135 &838845023
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4268,7 +4271,7 @@ GameObject:
   - component: {fileID: 1230647020}
   - component: {fileID: 1230647021}
   m_Layer: 0
-  m_Name: interacte
+  m_Name: Interacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5916,6 +5919,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1886565852 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2448637161848320438, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+  m_PrefabInstance: {fileID: 351944003418168094}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1911595020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -6249,6 +6263,79 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &351944003418168094
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1647999953433221417, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_Name
+      value: Vortex
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448637161848320438, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 07eefa726c15b4860bf67b79389ddc65, type: 3}
+    - target: {fileID: 6194896077444093185, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194896077444093185, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194896077444093185, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194896077444093185, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194896077444093185, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194896077444093185, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194896077444093185, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194896077444093185, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194896077444093185, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194896077444093185, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194896077444093185, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413612231898025503, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 1886565852}
+    - target: {fileID: 8413612231898025503, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: infos.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413612231898025503, guid: 9800da77031ce43d68000a15ff072047, type: 3}
+      propertyPath: infos.Array.data[0].name
+      value: Sphere (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9800da77031ce43d68000a15ff072047, type: 3}
 --- !u!1001 &8765489994903951804
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -46,6 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2658e74fe37491d93000806e318d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 2448637161848320438}
+  strict: 0
+  infos:
+  - name: Sphere (1)
 --- !u!65 &8703289614285170127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -328,7 +332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d1ebdb4ae5031479588ad8da0320b45e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07eefa726c15b4860bf67b79389ddc65, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
