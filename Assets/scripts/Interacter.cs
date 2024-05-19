@@ -8,7 +8,7 @@ public class Interacter : MonoBehaviour
     public static Interacter Instance;
 
     public bool holdingItem = false;
-    public Transform currentItem;
+    public Interactable currentItem;
     public float speed = 1f;
     public Transform target;
     public float force = 100f;
@@ -34,8 +34,8 @@ public class Interacter : MonoBehaviour
     void Update()
     {
         if (holdingItem) {
-            currentItem.position = Vector3.Lerp(currentItem.position, target.position, speed * Time.deltaTime);
-            currentItem.rotation = Quaternion.Lerp(currentItem.rotation, target.rotation, speed * Time.deltaTime);
+            currentItem.transform.position = Vector3.Lerp(currentItem.transform.position, target.position, speed * Time.deltaTime);
+            currentItem.transform.rotation = Quaternion.Lerp(currentItem.transform.rotation, currentItem.initRot, speed * Time.deltaTime);
 
             if (Input.GetMouseButtonDown(0)) {
                 holdingItem = false;
@@ -57,7 +57,7 @@ public class Interacter : MonoBehaviour
             if (interactable != null && interactable.able) {
                 Select(interactable);
                 if (Input.GetMouseButtonDown(0))
-                    PickUpItem(interactable.transform);
+                    PickUpItem(interactable);
             } else {
                 Deselect();
             }
@@ -102,11 +102,11 @@ public class Interacter : MonoBehaviour
     void HideReticleDelay() {
         reticle_group.SetActive(false);
     }
-    public void PickUpItem(Transform interactable) {
+    public void PickUpItem(Interactable interactable) {
         Deselect();
 
         holdingItem = true;
-        currentItem = interactable.transform;
+        currentItem = interactable;
         currentItem.GetComponent<Rigidbody>().isKinematic = true;
 
         var photo = interactable.GetComponent<Photo>();

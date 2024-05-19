@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour {
     public bool able = true;
+    public Quaternion initRot;
+
     // Start is called before the first frame update
     void Start() {
-
+        initRot = transform.rotation;
         Rigidbody r = GetComponent<Rigidbody>();
         if (r == null)
             r = gameObject.AddComponent<Rigidbody>();

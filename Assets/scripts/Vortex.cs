@@ -6,8 +6,8 @@ using DG.Tweening;
 
 public class Vortex : MonoBehaviour
 {
-    public Image image;
     private bool canTake = true;
+    public ParticleSystem particleSystem;
 
     public bool finished = false;
     public Text uiText;
@@ -108,7 +108,7 @@ public class Vortex : MonoBehaviour
 
     void RejectPhoto(Photo photo) {
         _photo = photo;
-        image.color = Color.red;
+        particleSystem.startColor = Color.red;
         Invoke($"delay", 3f);   
     }
     void delay() {
@@ -116,7 +116,7 @@ public class Vortex : MonoBehaviour
         _photo.GetComponent<Rigidbody>().useGravity = true;
         _photo.GetComponent<Rigidbody>().isKinematic = false;
         _photo.GetComponent<Rigidbody>().AddForce(-transform.forward * 200F);
-        image.color = Color.white;
+        particleSystem.startColor = Color.yellow;
 
         CancelInvoke($"delay2");
         Invoke($"delay2", 2f);
@@ -129,7 +129,7 @@ public class Vortex : MonoBehaviour
     void ConfirmPhoto(Photo photo) {
         CancelInvoke($"delay");
         
-        image.color = Color.green;
+            particleSystem.startColor = Color.green;
 
         uiText.text = "great !";
 
@@ -147,7 +147,7 @@ public class Vortex : MonoBehaviour
             NextLevel();
         } else {
             _photo.transform.DOScale(0f, 0.5f).SetEase(Ease.InBounce);
-            image.color = Color.white;
+            particleSystem.startColor = Color.yellow;
 
             uiText.text = "another photo please";
             canTake = true;
