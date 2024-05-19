@@ -30,7 +30,7 @@ public class Vortex : MonoBehaviour
 
     private void Start()
     {
-            uiText.text = "insert photo here";
+            uiText.text = "Insert photo here";
     }
 
     private void OnTriggerEnter(Collider other)
@@ -58,7 +58,7 @@ public class Vortex : MonoBehaviour
         photo.transform.DORotateQuaternion(transform.rotation, 0.5f);
         photo.transform.DOMove(transform.position, 0.5f);
 
-        uiText.text = "let me check...";
+        uiText.text = "Let me check...";
 
 
         _photo = photo;
@@ -75,7 +75,7 @@ public class Vortex : MonoBehaviour
 
                 } else {
                     confirm = false;
-                    uiText.text = "it's missing something";
+                    uiText.text = "It's missing something";
                     goto fail;
                 }
             }
@@ -83,7 +83,7 @@ public class Vortex : MonoBehaviour
             foreach (var forbidenItem in pic.forbidenItems) {
                 if (_photo.presentItems.Contains(forbidenItem)) {
                     confirm = false;
-                    uiText.text = "something shouldn't be here";
+                    uiText.text = "Something shouldn't be here";
                     goto fail;
                 }
             }
@@ -102,7 +102,14 @@ public class Vortex : MonoBehaviour
 
     void NextLevel() {
         finished = true;
+        transform.DOScale(0f, 1.5f);
+        _photo.transform.DOScale(0f, 0.5f).SetEase(Ease.InBounce);
 
+        Invoke("NextLevelDelay", 2f);
+    }
+
+    void NextLevelDelay() {
+        _photo.gameObject.SetActive(false);
         Menu.Instance.NextLevel();
     }
 
@@ -118,6 +125,8 @@ public class Vortex : MonoBehaviour
         _photo.GetComponent<Rigidbody>().AddForce(-transform.forward * 200F);
         particleSystem.startColor = Color.yellow;
 
+        _photo = null;
+
         CancelInvoke($"delay2");
         Invoke($"delay2", 2f);
     }
@@ -131,7 +140,7 @@ public class Vortex : MonoBehaviour
         
             particleSystem.startColor = Color.green;
 
-        uiText.text = "great !";
+        uiText.text = "Great Job !";
 
         Invoke("CheckWin", 2f);
     }
@@ -149,7 +158,7 @@ public class Vortex : MonoBehaviour
             _photo.transform.DOScale(0f, 0.5f).SetEase(Ease.InBounce);
             particleSystem.startColor = Color.yellow;
 
-            uiText.text = "another photo please";
+            uiText.text = "Another photo please.";
             canTake = true;
         }
 

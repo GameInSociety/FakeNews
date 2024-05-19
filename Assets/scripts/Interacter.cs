@@ -39,6 +39,9 @@ public class Interacter : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0)) {
                 holdingItem = false;
+                foreach (var b in currentItem.GetComponentsInChildren<Collider>()) {
+                    b.enabled = true;
+                }
                 currentItem.GetComponent<Rigidbody>().isKinematic = false;
                 currentItem.GetComponent<Rigidbody>().AddForce(transform.forward * force);
             }
@@ -108,6 +111,10 @@ public class Interacter : MonoBehaviour
         holdingItem = true;
         currentItem = interactable;
         currentItem.GetComponent<Rigidbody>().isKinematic = true;
+
+        foreach (var b in currentItem.GetComponentsInChildren<Collider>()) {
+            b.enabled = false;
+        }
 
         var photo = interactable.GetComponent<Photo>();
         if (photo != null) {
