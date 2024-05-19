@@ -73,7 +73,10 @@ public class Interacter : MonoBehaviour
         if (selected)
             return;
         overring = i;
-        i.gameObject.layer = 7;
+        foreach (var item in i.GetComponentsInChildren<Collider>())
+        {
+            item.gameObject.layer = 7;
+        }
         selected = true;
         ShowReticle();
     }
@@ -82,7 +85,12 @@ public class Interacter : MonoBehaviour
         if (!selected)
             return;
         if (overring != null)
-            overring.gameObject.layer = 0;
+        {
+            foreach (var item in overring.GetComponentsInChildren<Collider>())
+            {
+                item.gameObject.layer = 0;
+            }
+        }
         selected = false;
         HideReticle();
         Debug.Log($"deselect");
