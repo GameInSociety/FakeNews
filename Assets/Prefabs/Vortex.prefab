@@ -47,9 +47,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 2448637161848320438}
+  finished: 0
+  texts:
+  - Texte vortex
+  uiText: {fileID: 7373588385102115732}
   strict: 0
-  infos:
-  - name: Sphere (1)
+  nextVortex: {fileID: 0}
+  index: 0
 --- !u!65 &8703289614285170127
 BoxCollider:
   m_ObjectHideFlags: 0

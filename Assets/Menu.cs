@@ -6,11 +6,18 @@ using DG.Tweening;
 
 public class Menu : MonoBehaviour
 {
+    public static Menu Instance;
+
+    public GameObject[] vortexes;
+
     public GameObject title_Go;
     public GameObject help_Go;
 
     public RectTransform title_RectTransform;
     public RectTransform help_RectTransform;
+
+    public CanvasGroup title_CanvasGroup;
+    public CanvasGroup help_CanvasGroup;
 
     public float bounce_amount = 1.1f;
     public float bounce_dur = .4f;
@@ -28,22 +35,58 @@ public class Menu : MonoBehaviour
 
     public float displayDuration = 4f;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
+        foreach (var vortex in vortexes) {
+            vortex.SetActive(false);
+        }
+
+        StartCoroutine(NewLevel());
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.N))
+            NextLevel();
+    }
+
+    public void NextLevel() {
+
+        if (lvlIndex+1 == titles.Length) {
+            Debug.Log($"fin du jeu");
+            return;
+        }
+
+        ++lvlIndex;
+        
         StartCoroutine(NewLevel());
     }
 
     IEnumerator NewLevel() {
+
+        var fadedur = 0.5f;
+
+        title_CanvasGroup.DOFade(0f, fadedur);
+        help_CanvasGroup.DOFade(0f, fadedur);
+
+        yield return new WaitForSeconds(fadedur);
+        yield return new WaitForSeconds(2f);
+
+        help_Go.SetActive(false);
+
         title_Text.text = titles[lvlIndex];
         help_Text.text = helps[lvlIndex];
-
-        title_Go.SetActive(true);
-        help_Go.SetActive(false);
 
         title_RectTransform.anchoredPosition = Vector2.zero;
 
         yield return new WaitForSeconds(.5f);
 
+        title_CanvasGroup.DOFade(1f, 0.2f);
         Bounce(title_RectTransform.transform);
 
         yield return new WaitForSeconds(2f);
@@ -53,19 +96,15 @@ public class Menu : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         help_Go.SetActive(true);
+        help_CanvasGroup.DOFade(1f, 0.2f);
         help_RectTransform.anchoredPosition = Vector2.zero;
+        Bounce(help_RectTransform.transform);
 
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(2f);
 
         help_RectTransform.DOMove(help_Anchor.position, 0.5f);
 
-        Bounce(help_RectTransform.transform);
-
-
-    }
-
-    void ShowTitleDelay() {
-        title_RectTransform.DOMove(title_Anchor.position, 0.5f);
+        vortexes[lvlIndex].SetActive(true);
     }
 
     public void Bounce (Transform t) {
