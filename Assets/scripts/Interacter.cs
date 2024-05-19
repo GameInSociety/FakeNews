@@ -18,6 +18,7 @@ public class Interacter : MonoBehaviour
     bool selected = false;
     public Interactable overring;
 
+
     private void Awake()
     {
         Instance = this;
@@ -26,7 +27,7 @@ public class Interacter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HideReticleDelay();   
+        HideReticleDelay();
     }
 
 
@@ -35,7 +36,12 @@ public class Interacter : MonoBehaviour
     {
         if (holdingItem) {
             currentItem.transform.position = Vector3.Lerp(currentItem.transform.position, target.position, speed * Time.deltaTime);
-            currentItem.transform.rotation = Quaternion.Lerp(currentItem.transform.rotation, currentItem.initRot, speed * Time.deltaTime);
+
+            if (!currentItem.turnToCam) {
+                currentItem.transform.rotation = Quaternion.Lerp(currentItem.transform.rotation, currentItem.initRot, speed * Time.deltaTime);
+            } else {
+                currentItem.transform.rotation = Quaternion.Lerp(currentItem.transform.rotation, target.rotation    , speed * Time.deltaTime);
+            }
 
             if (Input.GetMouseButtonDown(0)) {
                 holdingItem = false;
@@ -107,6 +113,12 @@ public class Interacter : MonoBehaviour
     }
     public void PickUpItem(Interactable interactable) {
         Deselect();
+
+        if (interactable.nextLevel) {
+            interactable.gameObject.SetActive(false);   
+            Menu.Instance.StartLevel();
+            return;
+        }
 
         holdingItem = true;
         currentItem = interactable;

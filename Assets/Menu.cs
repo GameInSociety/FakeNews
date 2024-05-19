@@ -10,6 +10,8 @@ public class Menu : MonoBehaviour
 
     public GameObject[] vortexes;
 
+    bool transition = false;
+
     public GameObject title_Go;
     public GameObject help_Go;
 
@@ -21,6 +23,8 @@ public class Menu : MonoBehaviour
 
     public float bounce_amount = 1.1f;
     public float bounce_dur = .4f;
+
+    public GameObject transition_go;
 
     public Text title_Text;
     public Text help_Text;
@@ -35,6 +39,7 @@ public class Menu : MonoBehaviour
 
     public float displayDuration = 4f;
 
+
     private void Awake()
     {
         Instance = this;
@@ -42,17 +47,40 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
+        title_CanvasGroup.alpha = 0f;
+        help_CanvasGroup.alpha = 0f;
+        
         foreach (var vortex in vortexes) {
             vortex.SetActive(false);
         }
-
-        StartCoroutine(NewLevel());
+        StartTransition();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.N))
-            NextLevel();
+    IEnumerator TransitionCoroutine() {
+
+        transition_go.SetActive(false);
+
+        help_CanvasGroup.DOFade(0f, 0.2f);
+        title_CanvasGroup.DOFade(0f, 0.2f);
+
+        yield return new WaitForSeconds(2f);
+
+        help_Go.SetActive(true);
+        help_Text.text = $"Go to the computer";
+        help_CanvasGroup.DOFade(1f, 0.2f);
+        help_RectTransform.anchoredPosition = Vector2.zero;
+
+        yield return new WaitForSeconds(2f);
+
+        Bounce(help_RectTransform.transform);
+        help_RectTransform.DOMove(help_Anchor.position, 0.5f);
+
+        transition_go.SetActive(true);
+
+    }
+
+    public void StartTransition() {
+        StartCoroutine(TransitionCoroutine());
     }
 
     public void NextLevel() {
@@ -63,25 +91,27 @@ public class Menu : MonoBehaviour
         }
 
         ++lvlIndex;
-        
-        StartCoroutine(NewLevel());
+        StartTransition();
     }
 
-    IEnumerator NewLevel() {
-
+    public void EndLevel() {
         var fadedur = 0.5f;
-
         title_CanvasGroup.DOFade(0f, fadedur);
         help_CanvasGroup.DOFade(0f, fadedur);
+    }
 
-        yield return new WaitForSeconds(fadedur);
-        yield return new WaitForSeconds(2f);
+    public void StartLevel() {
+        StartCoroutine(StartLevelCoroutine());
+    }
 
-        help_Go.SetActive(false);
+    IEnumerator StartLevelCoroutine() {
 
+        help_CanvasGroup.DOFade(0f, 0.5f);
         title_Text.text = titles[lvlIndex];
         help_Text.text = helps[lvlIndex];
 
+        title_Go.SetActive(true);
+        title_CanvasGroup.DOFade(1f, 0.5f);
         title_RectTransform.anchoredPosition = Vector2.zero;
 
         yield return new WaitForSeconds(.5f);
@@ -95,13 +125,12 @@ public class Menu : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        help_Go.SetActive(true);
         help_CanvasGroup.DOFade(1f, 0.2f);
         help_RectTransform.anchoredPosition = Vector2.zero;
-        Bounce(help_RectTransform.transform);
 
         yield return new WaitForSeconds(2f);
 
+        Bounce(help_RectTransform.transform);
         help_RectTransform.DOMove(help_Anchor.position, 0.5f);
 
         vortexes[lvlIndex].SetActive(true);

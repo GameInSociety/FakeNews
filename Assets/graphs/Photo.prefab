@@ -276,6 +276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   able: 1
   initRot: {x: 0, y: 0, z: 0, w: 0}
+  turnToCam: 1
+  nextLevel: 0
   presentItems: []
 --- !u!1 &6955973410710767387
 GameObject:
