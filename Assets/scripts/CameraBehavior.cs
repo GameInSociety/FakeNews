@@ -86,7 +86,7 @@ public class CameraBehavior : MonoBehaviour
         photo_instance = Instantiate(photo_prefab, null);
         photo_instance.GetComponentsInChildren<MeshRenderer>()[1].material.mainTexture = texture;
 
-        Interacter.Instance.PickUpItem(photo_instance.transform);
+        Interacter.Instance.PickUpItem(photo_instance.GetComponent<Interactable>());
 
         if (onTakePicture != null) {
             onTakePicture();
