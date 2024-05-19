@@ -36,7 +36,7 @@ public class CameraBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && !Interacter.Instance.holdingItem) {
+        if (Input.GetMouseButtonDown(1) && !Interacter.Instance.holdingItem) {
             if (takingPhoto) {
                 Camera_Exit();
             } else {
@@ -77,7 +77,7 @@ public class CameraBehavior : MonoBehaviour
             tookPhoto = true;
             texture = GetTextureFromCamera(Camera.main);
             takeHiResShot = false;
-            Invoke("delay", .5f);
+            Invoke("delay", 0f);
         }
     }
 
