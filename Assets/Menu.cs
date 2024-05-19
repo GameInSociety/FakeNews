@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -133,7 +134,14 @@ public class Menu : MonoBehaviour
         Bounce(help_RectTransform.transform);
         help_RectTransform.DOMove(help_Anchor.position, 0.5f);
 
+if ( lvlIndex == 5 ) {
+		SceneManager.LoadScene("Main Menu");
+	}
+
         vortexes[lvlIndex].SetActive(true);
+
+	
+
     }
 
     public void Bounce (Transform t) {
