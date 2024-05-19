@@ -48,11 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 2448637161848320438}
   finished: 0
-  texts:
-  - Texte vortex
   uiText: {fileID: 7373588385102115732}
-  strict: 0
-  nextVortex: {fileID: 0}
+  pictureLevels: []
   index: 0
 --- !u!65 &8703289614285170127
 BoxCollider:
@@ -257,7 +254,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 764dd6c7175734eb89b15b2c4c061b05, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -269,7 +266,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INTERNET.COM
+  m_Text: Insert pgoto here
 --- !u!1 &3687583889847581023
 GameObject:
   m_ObjectHideFlags: 0
