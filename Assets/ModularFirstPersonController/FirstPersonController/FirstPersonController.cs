@@ -60,7 +60,7 @@ public class FirstPersonController : MonoBehaviour
     public float maxVelocityChange = 10f;
 
     // Internal Variables
-    private bool isWalking = false;
+    public bool isWalking = false;
 
     #region Sprint
 
@@ -363,6 +363,7 @@ public class FirstPersonController : MonoBehaviour
             HeadBob();
         }
     }
+    float t = 0f;
 
     void FixedUpdate()
     {
@@ -381,6 +382,7 @@ public class FirstPersonController : MonoBehaviour
             }
             else
             {
+                t = 0f;
                 isWalking = false;
             }
 
