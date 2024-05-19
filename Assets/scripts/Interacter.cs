@@ -18,6 +18,7 @@ public class Interacter : MonoBehaviour
     bool selected = false;
     public Interactable overring;
 
+
     private void Awake()
     {
         Instance = this;
@@ -26,7 +27,7 @@ public class Interacter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HideReticleDelay();   
+        HideReticleDelay();
     }
 
 
@@ -35,10 +36,18 @@ public class Interacter : MonoBehaviour
     {
         if (holdingItem) {
             currentItem.transform.position = Vector3.Lerp(currentItem.transform.position, target.position, speed * Time.deltaTime);
-            currentItem.transform.rotation = Quaternion.Lerp(currentItem.transform.rotation, currentItem.initRot, speed * Time.deltaTime);
+
+            if (!currentItem.turnToCam) {
+                currentItem.transform.rotation = Quaternion.Lerp(currentItem.transform.rotation, currentItem.initRot, speed * Time.deltaTime);
+            } else {
+                currentItem.transform.rotation = Quaternion.Lerp(currentItem.transform.rotation, target.rotation    , speed * Time.deltaTime);
+            }
 
             if (Input.GetMouseButtonDown(0)) {
                 holdingItem = false;
+                foreach (var b in currentItem.GetComponentsInChildren<Collider>()) {
+                    b.enabled = true;
+                }
                 currentItem.GetComponent<Rigidbody>().isKinematic = false;
                 currentItem.GetComponent<Rigidbody>().AddForce(transform.forward * force);
             }
@@ -70,7 +79,10 @@ public class Interacter : MonoBehaviour
         if (selected)
             return;
         overring = i;
-        i.gameObject.layer = 7;
+        foreach (var item in i.GetComponentsInChildren<Collider>())
+        {
+            item.gameObject.layer = 7;
+        }
         selected = true;
         ShowReticle();
     }
@@ -79,7 +91,12 @@ public class Interacter : MonoBehaviour
         if (!selected)
             return;
         if (overring != null)
-            overring.gameObject.layer = 0;
+        {
+            foreach (var item in overring.GetComponentsInChildren<Collider>())
+            {
+                item.gameObject.layer = 0;
+            }
+        }
         selected = false;
         HideReticle();
         Debug.Log($"deselect");
@@ -105,9 +122,19 @@ public class Interacter : MonoBehaviour
     public void PickUpItem(Interactable interactable) {
         Deselect();
 
+        if (interactable.nextLevel) {
+            interactable.gameObject.SetActive(false);   
+            Menu.Instance.StartLevel();
+            return;
+        }
+
         holdingItem = true;
         currentItem = interactable;
         currentItem.GetComponent<Rigidbody>().isKinematic = true;
+
+        foreach (var b in currentItem.GetComponentsInChildren<Collider>()) {
+            b.enabled = false;
+        }
 
         var photo = interactable.GetComponent<Photo>();
         if (photo != null) {

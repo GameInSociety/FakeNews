@@ -5,6 +5,9 @@ using UnityEngine;
 public class Interactable : MonoBehaviour {
     public bool able = true;
     public Quaternion initRot;
+    public bool turnToCam = false;
+
+    public bool nextLevel = false;
 
     // Start is called before the first frame update
     void Start() {
