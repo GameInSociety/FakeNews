@@ -10,16 +10,15 @@ public class Vortex : MonoBehaviour
     private bool canTake = true;
 
     public bool finished = false;
-
-    public string[] texts;
-
     public Text uiText;
 
-    public bool strict = false;
 
+    [System.Serializable]   
     public class PictureLevel {
-        public List<Photo.Info> infos = new List<Photo.Info>();
+        public List<string> neededItems = new List<string>();
+        public List<string> forbidenItems = new List<string>();
         public bool suc = false;
+        public bool strict = false;
     }
 
     public List<PictureLevel> pictureLevels = new List<PictureLevel>();
@@ -31,7 +30,7 @@ public class Vortex : MonoBehaviour
 
     private void Start()
     {
-        uiText.text = texts[index];
+            uiText.text = "insert photo here";
     }
 
     private void OnTriggerEnter(Collider other)
@@ -52,11 +51,15 @@ public class Vortex : MonoBehaviour
             Interacter.Instance.holdingItem = false;
         }
 
+
         photo.able = false;
         photo.GetComponent<Rigidbody>().useGravity = false;
         photo.GetComponent<Rigidbody>().isKinematic = true;
         photo.transform.DORotateQuaternion(transform.rotation, 0.5f);
         photo.transform.DOMove(transform.position, 0.5f);
+
+        uiText.text = "let me check...";
+
 
         _photo = photo;
         Invoke("CheckPhoto", 2f);
@@ -64,22 +67,37 @@ public class Vortex : MonoBehaviour
 
     void CheckPhoto() {
         foreach (var pic in pictureLevels) {
-            int count = 0;
-            foreach (var info in pic.infos) {
-                if (_photo.infos.Find(x => x.name == info.name) != null)
-                    ++count;
+            if (pic.suc)
+                continue;
+            bool confirm = true;
+            foreach (var neededItem in pic.neededItems) {
+                if (_photo.presentItems.Contains(neededItem)) {
+
+                } else {
+                    confirm = false;
+                    uiText.text = "it's missing something";
+                    goto fail;
+                }
             }
 
-            if (count >= pic.infos.Count) {
+            foreach (var forbidenItem in pic.forbidenItems) {
+                if (_photo.presentItems.Contains(forbidenItem)) {
+                    confirm = false;
+                    uiText.text = "something shouldn't be here";
+                    goto fail;
+                }
+            }
+
+            
+            if (confirm) {
+                pic.suc = true;
                 ConfirmPhoto(_photo);
                 return;
             }
         }
 
-        
+        fail:
         RejectPhoto(_photo);
-
-
     }
 
     void NextLevel() {
@@ -113,6 +131,8 @@ public class Vortex : MonoBehaviour
         
         image.color = Color.green;
 
+        uiText.text = "great !";
+
         Invoke("CheckWin", 2f);
     }
 
@@ -125,6 +145,12 @@ public class Vortex : MonoBehaviour
 
         if (suc) {
             NextLevel();
+        } else {
+            _photo.transform.DOScale(0f, 0.5f).SetEase(Ease.InBounce);
+            image.color = Color.white;
+
+            uiText.text = "another photo please";
+            canTake = true;
         }
 
     }

@@ -5,10 +5,5 @@ using UnityEngine;
 public class Photo : Interactable
 {
     public static Photo current;
-    public List<Info> infos;
-
-    [System.Serializable]
-    public class Info {
-        public string name;
-    }
+    public List<string> presentItems;
 }
