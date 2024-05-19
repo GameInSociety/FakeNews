@@ -66,7 +66,7 @@ public class Menu : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         help_Go.SetActive(true);
-        help_Text.text = $"Go to the computer";
+        help_Text.text = $"Go to the radio";
         help_CanvasGroup.DOFade(1f, 0.2f);
         help_RectTransform.anchoredPosition = Vector2.zero;
 
