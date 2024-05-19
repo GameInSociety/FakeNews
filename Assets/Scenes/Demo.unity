@@ -419,6 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   able: 1
+  initRot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!135 &31362039
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1529,6 +1530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   able: 1
+  initRot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!135 &630496128
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2247,6 +2249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   able: 1
+  initRot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!135 &838845023
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5646,22 +5649,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 456826330, guid: e3b8d37d61bfb44e7909c32a0abcea15, type: 3}
-      propertyPath: m_SortingOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1292944991, guid: e3b8d37d61bfb44e7909c32a0abcea15, type: 3}
-      propertyPath: helps.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1292944991, guid: e3b8d37d61bfb44e7909c32a0abcea15, type: 3}
-      propertyPath: titles.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1292944991, guid: e3b8d37d61bfb44e7909c32a0abcea15, type: 3}
-      propertyPath: vortexes.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1292944991, guid: e3b8d37d61bfb44e7909c32a0abcea15, type: 3}
       propertyPath: vortexes.Array.data[0]
       value: 
@@ -5674,14 +5661,6 @@ PrefabInstance:
       propertyPath: vortexes.Array.data[2]
       value: 
       objectReference: {fileID: 732476157}
-    - target: {fileID: 3237738822042196250, guid: e3b8d37d61bfb44e7909c32a0abcea15, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -120
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237738822042196250, guid: e3b8d37d61bfb44e7909c32a0abcea15, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7543278185048999124, guid: e3b8d37d61bfb44e7909c32a0abcea15, type: 3}
       propertyPath: m_Name
       value: FirstPersonController
