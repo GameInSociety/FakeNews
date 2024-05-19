@@ -58,7 +58,7 @@ public class CameraBehavior : MonoBehaviour
     }
 
     void Camera_Update() {
-        if (Input.GetKeyDown(KeyCode.T) && !tookPhoto)
+        if (Input.GetMouseButtonDown(0) && !tookPhoto)
             TakePicture();
     }
 
