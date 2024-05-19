@@ -9,18 +9,38 @@ public class Vortex : MonoBehaviour
     public Image image;
     private bool canTake = true;
 
+    public bool finished = false;
+
+    public string[] texts;
+
+    public Text uiText;
+
     public bool strict = false;
 
-    public List<Photo.Info> infos = new List<Photo.Info>();
+    public class PictureLevel {
+        public List<Photo.Info> infos = new List<Photo.Info>();
+        public bool suc = false;
+    }
+
+    public List<PictureLevel> pictureLevels = new List<PictureLevel>();
+
 
     Photo _photo;
 
+    public int index;
+
+    private void Start()
+    {
+        uiText.text = texts[index];
+    }
+
     private void OnTriggerEnter(Collider other)
     {
+        if (finished)
+            return;
         var photo = other.GetComponent<Photo>();
         if (photo != null && canTake) {
             canTake = false;
-            Debug.Log($"try photo");
             CancelInvoke($"delay");
             TryPhoto(photo);
         }
@@ -38,32 +58,34 @@ public class Vortex : MonoBehaviour
         photo.transform.DORotateQuaternion(transform.rotation, 0.5f);
         photo.transform.DOMove(transform.position, 0.5f);
 
-
         _photo = photo;
         Invoke("CheckPhoto", 2f);
     }
 
     void CheckPhoto() {
-        int count = 0;
-        foreach (var info in infos) {
-            if (_photo.infos.Find(x => x.name == info.name) != null) {
-                ++count;
+        foreach (var pic in pictureLevels) {
+            int count = 0;
+            foreach (var info in pic.infos) {
+                if (_photo.infos.Find(x => x.name == info.name) != null)
+                    ++count;
+            }
+
+            if (count >= pic.infos.Count) {
+                ConfirmPhoto(_photo);
+                return;
             }
         }
 
-        if (strict) {
-            if (infos.Count == count) {
-                ConfirmPhoto(_photo);
-            } else {
-                RejectPhoto(_photo);
-            }
-        } else {
-            if (count >= infos.Count) {
-                ConfirmPhoto(_photo);
-            } else {
-                RejectPhoto(_photo);
-            }
-        }
+        
+        RejectPhoto(_photo);
+
+
+    }
+
+    void NextLevel() {
+        finished = true;
+
+        Menu.Instance.NextLevel();
     }
 
     void RejectPhoto(Photo photo) {
@@ -90,5 +112,20 @@ public class Vortex : MonoBehaviour
         CancelInvoke($"delay");
         
         image.color = Color.green;
+
+        Invoke("CheckWin", 2f);
+    }
+
+    void CheckWin() {
+        bool suc = true;
+        foreach (var item in pictureLevels) {
+            if (!item.suc)
+                suc = false;
+        }
+
+        if (suc) {
+            NextLevel();
+        }
+
     }
 }
