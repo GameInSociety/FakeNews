@@ -56,7 +56,7 @@ MonoBehaviour:
     value: 0
   tint:
     overrideState: 0
-    value: 0
+    value: -10
   colorFilter:
     overrideState: 1
     value: {r: 1, g: 1, b: 1, a: 1}
@@ -64,17 +64,17 @@ MonoBehaviour:
     overrideState: 1
     value: 0
   saturation:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 30
   brightness:
     overrideState: 0
     value: 0
   postExposure:
-    overrideState: 1
-    value: 0
-  contrast:
     overrideState: 0
-    value: 0
+    value: 0.03
+  contrast:
+    overrideState: 1
+    value: -5
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -1375,10 +1375,10 @@ MonoBehaviour:
     overrideState: 1
     value: {x: 53.999985, y: 99}
   minLuminance:
-    overrideState: 0
+    overrideState: 1
     value: 0
   maxLuminance:
-    overrideState: 0
+    overrideState: 1
     value: 0
   keyValue:
     overrideState: 1
@@ -1409,7 +1409,7 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   preset:
-    overrideState: 0
+    overrideState: 1
     value: 2
   maximumIterationCount:
     overrideState: 0
@@ -1427,9 +1427,29 @@ MonoBehaviour:
     overrideState: 0
     value: 0.5
   vignette:
-    overrideState: 0
-    value: 0.5
---- !u!114 &-195479817958074346
+    overrideState: 1
+    value: 0.811
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
+  m_Name: PP_Volume Profile
+  m_EditorClassIdentifier: 
+  settings:
+  - {fileID: 5825212479210306437}
+  - {fileID: -1593313341378210388}
+  - {fileID: -4452425469205340808}
+  - {fileID: -1461079707961700157}
+  - {fileID: 6484830494139391111}
+  - {fileID: -5207524491425244829}
+  - {fileID: 5609229767767309408}
+--- !u!114 &5609229767767309408
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1446,10 +1466,10 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   intensity:
-    overrideState: 1
-    value: 4.9
+    overrideState: 0
+    value: 0
   threshold:
-    overrideState: 1
+    overrideState: 0
     value: 1
   softKnee:
     overrideState: 0
@@ -1476,26 +1496,6 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 0
     value: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: PP_Volume Profile
-  m_EditorClassIdentifier: 
-  settings:
-  - {fileID: 5825212479210306437}
-  - {fileID: -1593313341378210388}
-  - {fileID: -4452425469205340808}
-  - {fileID: -1461079707961700157}
-  - {fileID: 6484830494139391111}
-  - {fileID: -5207524491425244829}
-  - {fileID: -195479817958074346}
 --- !u!114 &5825212479210306437
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1517,7 +1517,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.64
+    value: 0.25
   color:
     overrideState: 0
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -1534,8 +1534,8 @@ MonoBehaviour:
     overrideState: 0
     value: -12
   thicknessModifier:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 10
   directLightingStrength:
     overrideState: 0
     value: 0
@@ -1566,7 +1566,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.384
+    value: 0.368
   size:
     overrideState: 1
     value: 0.45
