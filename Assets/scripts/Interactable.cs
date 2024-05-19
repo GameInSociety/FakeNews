@@ -6,6 +6,11 @@ public class Interactable : MonoBehaviour {
     public bool able = true;
     // Start is called before the first frame update
     void Start() {
+
+        Rigidbody r = GetComponent<Rigidbody>();
+        if (r == null)
+            r = gameObject.AddComponent<Rigidbody>();
+
         CameraBehavior.Instance.onTakePicture += Test;
     }
 
