@@ -115,7 +115,7 @@ public class Vortex : MonoBehaviour
         _photo.able = true;
         _photo.GetComponent<Rigidbody>().useGravity = true;
         _photo.GetComponent<Rigidbody>().isKinematic = false;
-        _photo.GetComponent<Rigidbody>().AddForce(transform.forward * 200F);
+        _photo.GetComponent<Rigidbody>().AddForce(-transform.forward * 200F);
         image.color = Color.white;
 
         CancelInvoke($"delay2");
