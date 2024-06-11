@@ -1,32 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
+using UnityEngine.Rendering;
+
 public class CameraBehavior : MonoBehaviour
 {
     public static CameraBehavior Instance;
-    public bool takingPhoto = false;
-    bool tookPhoto = false;
 
+    // components
+    public Animator _animator;
+    public AudioSource source;
+
+    // state
+    public bool takingPhoto = false;
+
+    /// <summary>
+    ///  deletgates
+    /// </summary>
     public delegate void OnTakePicture();
     public OnTakePicture onTakePicture;
 
-    public AudioSource source;
-
-    public int resWidth = 2550;
-    public int resHeight = 3300;
-
-    private bool takeHiResShot = false;
-
+    // photo
     GameObject photo_instance;
     public float photo_force = 50f;
-
     public Transform photo_target;
     public GameObject photo_prefab;
 
-    public Animator _animator;
-
-    Texture2D texture;
+    [SerializeField] Camera LinkedCamera;
+    [SerializeField] RenderTexture CameraRT;
+    Texture2D LastImage;
 
     private void Awake()
     {
@@ -52,63 +57,56 @@ public class CameraBehavior : MonoBehaviour
     }
 
     void Camera_Start() {
+        Debug.Log($"Camera (Start)");
         takingPhoto = true;
         _animator.SetTrigger("pull out");
-        tookPhoto = false;
     }
 
     void Camera_Update() {
-        if (Input.GetMouseButtonDown(0) && !tookPhoto)
+        if (Input.GetMouseButtonDown(0))
             TakePicture();
     }
 
     void Camera_Exit() {
         takingPhoto = false;
+        Debug.Log($"Camera (Exit)");
         _animator.SetTrigger("exit");
     }
 
     void TakePicture() {
-        takeHiResShot = true;
         source.Play();
+
+        //// transfer the texture - this is GPU side only
+        //Graphics.CopyTexture(CameraRT, LastImage);
+
+        AsyncGPUReadback.Request(CameraRT, 0, (AsyncGPUReadbackRequest action) => {
+            // create texture
+            LastImage = new Texture2D(CameraRT.width, CameraRT.height,
+                                      CameraRT.graphicsFormat,
+                                      UnityEngine.Experimental.Rendering.TextureCreationFlags.None);
+            LastImage.SetPixelData(action.GetData<byte>(), 0);
+            LastImage.Apply();
+
+            // save the image to file
+            var currentTime = System.DateTime.Now;
+            string fileName = $"Shot_{currentTime:yyyyMMdd_HHmmss}_photo.jpeg";
+            fileName = System.IO.Path.Combine(Application.persistentDataPath, fileName);
+            System.IO.File.WriteAllBytes(fileName, LastImage.EncodeToJPG());
+
+            // show the last image
+            PullOutPhoto();
+        });
     }
 
-    void LateUpdate() {
-        if (takeHiResShot) {
-            tookPhoto = true;
-            texture = GetTextureFromCamera(Camera.main);
-            takeHiResShot = false;
-            Invoke("delay", 0f);
-        }
-    }
-
-    void delay() {
+    void PullOutPhoto() {
         Camera_Exit();
         photo_instance = Instantiate(photo_prefab, null);
-        photo_instance.GetComponentsInChildren<MeshRenderer>()[1].material.mainTexture = texture;
+        photo_instance.GetComponentsInChildren<MeshRenderer>()[1].material.mainTexture = LastImage;
 
         Interacter.Instance.PickUpItem(photo_instance.GetComponent<Interactable>());
 
         if (onTakePicture != null) {
             onTakePicture();
         }
-    }
-
-    private static Texture2D GetTextureFromCamera(Camera mCamera) {
-        Rect rect = new Rect(0, 0, mCamera.pixelWidth, mCamera.pixelHeight);
-        RenderTexture renderTexture = new RenderTexture(mCamera.pixelWidth, mCamera.pixelHeight, 24);
-        Texture2D screenShot = new Texture2D(mCamera.pixelWidth, mCamera.pixelHeight, TextureFormat.RGBA32, false);
-
-        mCamera.targetTexture = renderTexture;
-        mCamera.Render();
-
-        RenderTexture.active = renderTexture;
-
-        screenShot.ReadPixels(rect, 0, 0);
-        screenShot.Apply();
-
-
-        mCamera.targetTexture = null;
-        RenderTexture.active = null;
-        return screenShot;
     }
 }
