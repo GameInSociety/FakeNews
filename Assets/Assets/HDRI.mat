@@ -9,25 +9,29 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: HDRI
   m_Shader: {fileID: 103, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _Tex:
-        m_Texture: {fileID: 8900000, guid: 4a0b9bc1325fd7e4d973814b9a5d36f4, type: 3}
+        m_Texture: {fileID: 8900000, guid: 1617dac4f3132eb40a141ba5fb15d116, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _Exposure: 0.5
-    - _Rotation: 0
+    - _Rotation: 14
     m_Colors:
     - _Tint: {r: 1, g: 1, b: 1, a: 0.5}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
