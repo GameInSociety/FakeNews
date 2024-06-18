@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEditor.ShaderGraph.Internal;
+using UnityEditor;
 
 public class Interacter : MonoBehaviour
 {
@@ -30,18 +32,30 @@ public class Interacter : MonoBehaviour
         HideReticleDelay();
     }
 
+    // item rotation
+    public Transform rotate_Box;
+    public Vector3 mousePosition;
+    public Vector3 mousePos;
+    public Vector3 prevPos;
+    public Vector3 delta;
+    public float rotateSpeed = 100f;
+    public float distanceSpeed = 100f;
+
+
 
     // Update is called once per frame
     void Update()
     {
+            target.Translate(Vector3.forward * distanceSpeed * Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime);
         if (holdingItem) {
             currentItem.transform.position = Vector3.Lerp(currentItem.transform.position, target.position, speed * Time.deltaTime);
 
-            if (!currentItem.turnToCam) {
+
+            /*if (!currentItem.turnToCam) {
                 currentItem.transform.rotation = Quaternion.Lerp(currentItem.transform.rotation, currentItem.initRot, speed * Time.deltaTime);
             } else {
                 currentItem.transform.rotation = Quaternion.Lerp(currentItem.transform.rotation, target.rotation    , speed * Time.deltaTime);
-            }
+            }*/
 
             if (Input.GetMouseButtonDown(0)) {
                 holdingItem = false;
@@ -50,6 +64,25 @@ public class Interacter : MonoBehaviour
                 }
                 currentItem.GetComponent<Rigidbody>().isKinematic = false;
                 currentItem.GetComponent<Rigidbody>().AddForce(transform.forward * force);
+            }
+
+
+            if (Input.GetMouseButton(1)) {
+                FirstPersonController.instance.cameraCanMove = false;
+                
+                var cam = Camera.main;
+
+                float rotX = Input.GetAxis("Mouse X") * rotateSpeed;
+                float rotY = Input.GetAxis("Mouse Y") * rotateSpeed;
+
+                Vector3 right = Vector3.Cross(cam.transform.up, currentItem.transform.position - cam.transform.position);
+                Vector3 up = Vector3.Cross(currentItem.transform.position - cam.transform.position, right);
+                currentItem.transform.rotation = Quaternion.AngleAxis(-rotX, up) * currentItem.transform.rotation;
+                currentItem.transform.rotation = Quaternion.AngleAxis(rotY, right) * currentItem.transform.rotation;
+
+
+            } else {
+                FirstPersonController.instance.cameraCanMove = true;
             }
             return;
         }
@@ -135,6 +168,8 @@ public class Interacter : MonoBehaviour
         foreach (var b in currentItem.GetComponentsInChildren<Collider>()) {
             b.enabled = false;
         }
+
+        interactable.transform.SetParent(rotate_Box);
 
         var photo = interactable.GetComponent<Photo>();
         if (photo != null) {
