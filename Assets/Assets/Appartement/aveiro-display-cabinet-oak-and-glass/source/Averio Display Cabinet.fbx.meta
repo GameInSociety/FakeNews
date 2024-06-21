@@ -3,7 +3,27 @@ guid: 18e04ab5fa4fe8644b737c0c4500053e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FLOOR
+    second: {fileID: 2100000, guid: 22ae46637df52624aa6419af52112b2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GLASS
+    second: {fileID: 2100000, guid: 119f8f704f05e9b47ad2904d48b6cdde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GREY
+    second: {fileID: 2100000, guid: 2f9cc4752cf897845be8d65edc1a3ada, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OAK
+    second: {fileID: 2100000, guid: b83851361a5105743a533158d6e111ee, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,7 +66,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

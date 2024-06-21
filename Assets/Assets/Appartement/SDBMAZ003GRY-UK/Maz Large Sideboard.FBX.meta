@@ -3,7 +3,42 @@ guid: 8acb0d8846797f74e9472107b47aeb8a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FLOOR
+    second: {fileID: 2100000, guid: a41c52d0ca75cd64a80fc4faedf5536c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GLASS
+    second: {fileID: 2100000, guid: 119f8f704f05e9b47ad2904d48b6cdde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GREY
+    second: {fileID: 2100000, guid: 974a0e40bad1d244791a3ec8f9917b87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OAK
+    second: {fileID: 2100000, guid: 69bdd425ec51f0743a7606dcee8d3bce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: STEEL
+    second: {fileID: 2100000, guid: aee8db22943c2c24287bf747719001ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: STEEL_BLACK
+    second: {fileID: 2100000, guid: 261b7838882bd0440baffd12b2ae90fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WALNUT
+    second: {fileID: 2100000, guid: 640d9445f4667f5489943059718d5f1c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

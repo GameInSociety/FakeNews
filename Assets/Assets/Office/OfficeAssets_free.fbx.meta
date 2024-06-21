@@ -3,7 +3,77 @@ guid: ecf001aedde0cbc4ea8cc72c74eaaa85
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Cactus_1024
+    second: {fileID: 2100000, guid: 4129b69383b84ca4bbdbbaeca28b6560, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Clipboard_Notepad_1024
+    second: {fileID: 2100000, guid: fd7e66282fb52a448a7e17f8e8212885, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Computer_2048
+    second: {fileID: 2100000, guid: 2e6fbae14c2af224ea1c63359549e3c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Filebox_1024
+    second: {fileID: 2100000, guid: 93e820bc0ca7d7f4e8e2a6faf756207f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Lamps_CCTV_2048.001
+    second: {fileID: 2100000, guid: f5cf11692c1094243b6d03c15392500a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_OfficeStool_Bin_2048
+    second: {fileID: 2100000, guid: a5be2cd98f70c8d43b0275908d191b22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Office_PinBoard_Photo_Notepad_1024
+    second: {fileID: 2100000, guid: 03b0637f60386c341a49e8bcbefe4bff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Sigarettes_512
+    second: {fileID: 2100000, guid: 3d6777797b21b7947a7dac49cafd4df4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Table_2048
+    second: {fileID: 2100000, guid: 14277949d7883444484d685836ce7705, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_TapeRecorder_1024
+    second: {fileID: 2100000, guid: e4ee65316b2a2a44c8f1981d874d8853, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_TapeRecorder_Tape_Rotors_Glass_1024
+    second: {fileID: 2100000, guid: 874a81c1b4682274abd06aa7e43234c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Vent_1024
+    second: {fileID: 2100000, guid: b4d550a3cee7ae443b0a40c35b3819c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PhotoFrame_20x30_likeA4_512
+    second: {fileID: 2100000, guid: 959215de087ad4a42a8bbafaa8b57d9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Poster_1024
+    second: {fileID: 2100000, guid: 4fda5e717adff87439b74d7b6295a910, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -88,7 +158,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.012
+    globalScale: 1.2
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

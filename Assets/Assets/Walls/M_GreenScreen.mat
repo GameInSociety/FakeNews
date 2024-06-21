@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Base_Map:
-        m_Texture: {fileID: 2800000, guid: 0377e9165f8cf4543a14b330b05e6881, type: 3}
+        m_Texture: {fileID: 2800000, guid: ad0fb695b3b247640bca11be6ff9fc0e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -155,7 +155,7 @@ Material:
     - _Surface: 0
     - _Tiling: 1
     - _Triplanar_Blend: 1
-    - _Triplanar_Tiling: 5
+    - _Triplanar_Tiling: 1
     - _Use_Base_Map: 0
     - _Use_Details: 0
     - _Use_Details_Triplanar: 0

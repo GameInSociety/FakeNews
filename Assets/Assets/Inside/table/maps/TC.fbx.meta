@@ -3,7 +3,37 @@ guid: 11e1cb4bd813955479a5268cdeacc9d2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Connubia_Calligaris_Talks_Chair_Aluminium Black Anodize_94f10e2
+    second: {fileID: 2100000, guid: dfde5ec7edfb22543bc25ba5d27ffd4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Connubia_Calligaris_Talks_Chair_Fabric Curtain Heavy
+    second: {fileID: 2100000, guid: cc6f482b2a6f8094495585063a1444e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Connubia_Calligaris_Talks_Chair_Fabric Velvet Crushed
+    second: {fileID: 2100000, guid: 36e5d8af7a6c44942b52364d2c648ad4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Connubia_Calligaris_Talks_Chair_Glass Clear
+    second: {fileID: 2100000, guid: a59220332da37f740884c30de3b3d139, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Connubia_Calligaris_Talks_Chair_Material #22904
+    second: {fileID: 2100000, guid: bae5c8c6e9e921b4798cfc15de2d967c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Connubia_Calligaris_Talks_Chair_PVC FoamBoard White111
+    second: {fileID: 2100000, guid: cd4a2f8c2429617499244ff2bd87c6b9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -88,7 +118,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.0139999995
+    globalScale: 1.4
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
