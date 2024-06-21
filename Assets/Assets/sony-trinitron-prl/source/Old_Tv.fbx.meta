@@ -3,7 +3,17 @@ guid: de34cd501e7959f4ba84883b7c0a0371
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TV_Body_material
+    second: {fileID: 2100000, guid: 22ebc09fc26faf649858bb8c5a68ebcc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TV_Screen_material
+    second: {fileID: 2100000, guid: 0dcedf3293ae1af45a62013c4e612ddf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
