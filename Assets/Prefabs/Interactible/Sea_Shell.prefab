@@ -34,19 +34,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99dd992f37ff8aa439d0c986b0e6f095, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.36777163
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99dd992f37ff8aa439d0c986b0e6f095, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99dd992f37ff8aa439d0c986b0e6f095, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9299162
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99dd992f37ff8aa439d0c986b0e6f095, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99dd992f37ff8aa439d0c986b0e6f095, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99dd992f37ff8aa439d0c986b0e6f095, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -136.843
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99dd992f37ff8aa439d0c986b0e6f095, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 08ffbcb1c7ac3f34aa32a9afab6b1f7e, type: 2}
     - target: {fileID: 919132149155446097, guid: 99dd992f37ff8aa439d0c986b0e6f095, type: 3}
       propertyPath: m_Name
-      value: BB_013
+      value: Sea_Shell
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -110,8 +110,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.0642408, y: 0.055179846, z: 0.11503156}
+  m_Center: {x: 0.001494738, y: 0.012172903, z: 0.0010614395}
 --- !u!54 &2329692748247748964
 Rigidbody:
   m_ObjectHideFlags: 0
