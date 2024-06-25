@@ -6,6 +6,8 @@ public class Interactable : MonoBehaviour {
 
     public string id = "";
 
+    public Item _linkedItem;
+
     public bool able = true;
     public Quaternion initRot;
     public bool turnToCam = false;
@@ -20,6 +22,30 @@ public class Interactable : MonoBehaviour {
             r = gameObject.AddComponent<Rigidbody>();
 
         CameraBehavior.Instance.onTakePicture += Test;
+        SetId();
+    }
+
+    public virtual void SetId() {
+        if (string.IsNullOrEmpty(id))
+            return;
+        _linkedItem = ItemManager.Instance.items.Find(x => x.id == id);
+        if (_linkedItem == null) {
+            Debug.Log($"found no item for interactable with id : {id}");
+        } else {
+
+        }
+    }
+
+    public virtual void PickUp() {
+        Interacter.Instance.holdingItem = true;
+        Interacter.Instance.currentInteractable = this;
+        GetComponent<Rigidbody>().isKinematic = true;
+
+        foreach (var b in GetComponentsInChildren<Collider>()) {
+            b.enabled = false;
+        }
+
+        transform.SetParent(Interacter.Instance.rotate_Box);
     }
 
     // Update is called once per frame
@@ -28,9 +54,15 @@ public class Interactable : MonoBehaviour {
     }
 
     void Test() {
+        if ( string.IsNullOrEmpty( id ) ) {
+            Debug.Log($"skipping : {name}, no id");
+            return;
+        }
+
         var v = Camera.main.WorldToViewportPoint(transform.position);
         if ( v.x > 0 && v.x < 1f && v.y > 0f && v.y < 1f && v.z > 0f) {
-            Photo.current.presentItems.Add(id);
+            Photo.current.AddItem(_linkedItem);
         }
+
     }
 }

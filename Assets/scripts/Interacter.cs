@@ -10,7 +10,7 @@ public class Interacter : MonoBehaviour
     public static Interacter Instance;
 
     public bool holdingItem = false;
-    public Interactable currentItem;
+    public Interactable currentInteractable;
     public float speed = 1f;
     public Transform target;
     public float force = 100f;
@@ -48,7 +48,7 @@ public class Interacter : MonoBehaviour
     {
             target.Translate(Vector3.forward * distanceSpeed * Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime);
         if (holdingItem) {
-            currentItem.transform.position = Vector3.Lerp(currentItem.transform.position, target.position, speed * Time.deltaTime);
+            currentInteractable.transform.position = Vector3.Lerp(currentInteractable.transform.position, target.position, speed * Time.deltaTime);
 
 
             /*if (!currentItem.turnToCam) {
@@ -59,11 +59,11 @@ public class Interacter : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0)) {
                 holdingItem = false;
-                foreach (var b in currentItem.GetComponentsInChildren<Collider>()) {
+                foreach (var b in currentInteractable.GetComponentsInChildren<Collider>()) {
                     b.enabled = true;
                 }
-                currentItem.GetComponent<Rigidbody>().isKinematic = false;
-                currentItem.GetComponent<Rigidbody>().AddForce(transform.forward * force);
+                currentInteractable.GetComponent<Rigidbody>().isKinematic = false;
+                currentInteractable.GetComponent<Rigidbody>().AddForce(transform.forward * force);
             }
 
 
@@ -75,10 +75,10 @@ public class Interacter : MonoBehaviour
                 float rotX = Input.GetAxis("Mouse X") * rotateSpeed;
                 float rotY = Input.GetAxis("Mouse Y") * rotateSpeed;
 
-                Vector3 right = Vector3.Cross(cam.transform.up, currentItem.transform.position - cam.transform.position);
-                Vector3 up = Vector3.Cross(currentItem.transform.position - cam.transform.position, right);
-                currentItem.transform.rotation = Quaternion.AngleAxis(-rotX, up) * currentItem.transform.rotation;
-                currentItem.transform.rotation = Quaternion.AngleAxis(rotY, right) * currentItem.transform.rotation;
+                Vector3 right = Vector3.Cross(cam.transform.up, currentInteractable.transform.position - cam.transform.position);
+                Vector3 up = Vector3.Cross(currentInteractable.transform.position - cam.transform.position, right);
+                currentInteractable.transform.rotation = Quaternion.AngleAxis(-rotX, up) * currentInteractable.transform.rotation;
+                currentInteractable.transform.rotation = Quaternion.AngleAxis(rotY, right) * currentInteractable.transform.rotation;
 
 
             } else {
@@ -112,7 +112,7 @@ public class Interacter : MonoBehaviour
         if (selected)
             return;
         overring = i;
-        foreach (var item in i.GetComponentsInChildren<Collider>())
+        foreach (var item in i.GetComponentsInChildren<Transform>())
         {
             item.gameObject.layer = 7;
         }
@@ -125,14 +125,13 @@ public class Interacter : MonoBehaviour
             return;
         if (overring != null)
         {
-            foreach (var item in overring.GetComponentsInChildren<Collider>())
+            foreach (var item in overring.GetComponentsInChildren<Transform>())
             {
                 item.gameObject.layer = 0;
             }
         }
         selected = false;
         HideReticle();
-        Debug.Log($"deselect");
 
     }
 
@@ -154,27 +153,8 @@ public class Interacter : MonoBehaviour
     }
     public void PickUpItem(Interactable interactable) {
         Deselect();
+        interactable.PickUp();
 
-        if (interactable.nextLevel) {
-            interactable.gameObject.SetActive(false);   
-            Menu.Instance.StartLevel();
-            return;
-        }
-
-        holdingItem = true;
-        currentItem = interactable;
-        currentItem.GetComponent<Rigidbody>().isKinematic = true;
-
-        foreach (var b in currentItem.GetComponentsInChildren<Collider>()) {
-            b.enabled = false;
-        }
-
-        interactable.transform.SetParent(rotate_Box);
-
-        var photo = interactable.GetComponent<Photo>();
-        if (photo != null) {
-            Photo.current = photo;
-            Debug.Log($"Current Photo : {photo.name}");
-        }
+        
     }
 }

@@ -57,7 +57,6 @@ public class CameraBehavior : MonoBehaviour
     }
 
     void Camera_Start() {
-        Debug.Log($"Camera (Start)");
         takingPhoto = true;
         _animator.SetTrigger("pull out");
     }
@@ -69,7 +68,6 @@ public class CameraBehavior : MonoBehaviour
 
     void Camera_Exit() {
         takingPhoto = false;
-        Debug.Log($"Camera (Exit)");
         _animator.SetTrigger("exit");
     }
 
@@ -101,12 +99,15 @@ public class CameraBehavior : MonoBehaviour
     void PullOutPhoto() {
         Camera_Exit();
         photo_instance = Instantiate(photo_prefab, null);
-        photo_instance.GetComponentsInChildren<MeshRenderer>()[1].material.mainTexture = LastImage;
+        photo_instance.GetComponent<Photo>().rend.material.mainTexture = LastImage;
+
 
         Interacter.Instance.PickUpItem(photo_instance.GetComponent<Interactable>());
 
         if (onTakePicture != null) {
             onTakePicture();
         }
+
+        Photo.current.SetId();
     }
 }

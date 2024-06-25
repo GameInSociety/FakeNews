@@ -24,6 +24,11 @@ public class DataDownloader : MonoBehaviour {
 
 
     public string sheetToLoad;
+
+    private void Awake() {
+        Load();
+    }
+
     #region parse
     public virtual void Load() {
 
@@ -56,6 +61,46 @@ public class DataDownloader : MonoBehaviour {
 
     public virtual void GetCell(int rowIndex, List<string> cells) {
         row = rowIndex;
+
+        if ( row == 0) {
+            return;
+        }
+
+        if ( sheetName == "Quetes") {
+
+            var newQuest = new Quest();
+            newQuest.id = cells[0];
+            newQuest.name = cells[1];
+            newQuest.article = cells[2];
+            newQuest.clue = cells[4];
+
+            for (int i = 5; i < cells.Count; i += 2) {
+                if (string.IsNullOrEmpty(cells[i]))
+                    break;
+                newQuest.item_ids.Add(cells[i]);
+                if (i+i >= cells.Count) {
+                    break;
+                }
+                int score = 0;
+                if ( int.TryParse(cells[i + 1], out score)){
+                    newQuest.item_score.Add(score);
+                } else {
+                    Debug.Log($"can't parse {cells[i+1]} of {newQuest.name}");
+                }
+            }
+
+            QuestManager.Instance.AddQuest(newQuest);
+
+        } else {
+            var newItem = new Item();
+            newItem.id = cells[0];
+            newItem.displayName = cells[1];
+            newItem.phrase_setup = cells[2];
+            newItem.phrase_start = cells[3];
+            newItem.phrase_end = cells[4];
+            ItemManager.Instance.AddItem(newItem);
+        }
+
     }
     #endregion
 
