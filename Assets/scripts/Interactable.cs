@@ -66,3 +66,22 @@ public class Interactable : MonoBehaviour {
 
     }
 }
+
+
+
+
+
+public class Enemy {
+    public string name = "";
+    public int hitPoints = 10;
+
+    public void Attack() {
+
+    }
+}
+
+public class Archer : Enemy {
+
+}
+
+public class Warrior : 
