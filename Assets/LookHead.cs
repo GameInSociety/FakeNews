@@ -12,6 +12,14 @@ public class LookHead : MonoBehaviour
     public float lerpSpeed = 1f;
 
 
+    private void Start() {
+        if (target != null) {
+            tmp_target = new GameObject().transform;
+            tmp_target.parent = transform;
+            tmp_target.name = "TmpTarget";
+            SetTarget(target);
+        }
+    }
 
     private void LateUpdate() {
         if ( target == null )
