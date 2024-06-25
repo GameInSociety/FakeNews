@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemManager : MonoBehaviour {
-    public static ItemManager Instance;
-
-    private void Awake() {
-        Instance = this;
+    private static ItemManager _instance;
+    public static ItemManager Instance {
+        get {
+            if (_instance == null)
+                _instance = FindFirstObjectByType<ItemManager>();
+            return _instance;
+        }
     }
+
 
     public List<Item> items = new List<Item>();
 

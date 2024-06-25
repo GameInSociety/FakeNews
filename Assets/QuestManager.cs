@@ -5,19 +5,20 @@ using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
-    public static QuestManager Instance;
-
+    private static QuestManager _instance;
+    public static QuestManager Instance {
+        get {
+            if (_instance == null)
+                _instance = FindFirstObjectByType<QuestManager>();
+            return _instance;
+        }
+    }
     public List<Quest> quests = new List<Quest>();
 
     public int questIndex;
     public Quest currentQuest;
 
     public bool finishedAllQuests = false;
-
-    private void Awake() {
-        Instance = this;
-    }
-
     public void Start() {
         CurrentQuest_Setup();
     }

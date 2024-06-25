@@ -11,9 +11,8 @@ public class Boss : Interactable
 
     [Header("Phrases")]
 
-    [SerializeField]
-    private string phrase_endOfDay = "C'est bon pour aujourd'hui";
-
+    public string phrase_OnStart = "Salut !";
+    public string phrase_endOfDay = "C'est bon pour aujourd'hui";
     public string phrase_debutQuete = "Ta prochaine photo s'appelle ...";
     public string phrase_NoMorePictureNeeded = "Je n'ai plus besoin de photo aujourd'hui";
     public string phrase_PhotoCheck = "Je suis en train de regarder la photo";
@@ -42,6 +41,7 @@ public class Boss : Interactable
 
     private void Start() {
         lookHead.SetTarget(FirstPersonController.instance.playerCamera.transform);
+        StartDialog(phrase_OnStart);
     }
 
 
