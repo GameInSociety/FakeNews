@@ -12,6 +12,10 @@ public class Door : MonoBehaviour
     private bool open = false;
 
     private Quaternion initRot;
+
+    float timer = 0f;
+    public float timeToClose = 2f;
+
     private void Start() {
         initRot = transform.localRotation;
     }
@@ -19,6 +23,10 @@ public class Door : MonoBehaviour
     private void Update() {
         
         if ( open) {
+            timer += Time.deltaTime;
+            if (timer >= timeToClose ) {
+                open = false;
+            }
             targetTransform.localRotation = Quaternion.Lerp(targetTransform.localRotation, Quaternion.Euler(Vector3.up * targetAngle), rotateSpeed * Time.deltaTime); ; ; ;
         } else {
             targetTransform.localRotation = Quaternion.Lerp(targetTransform.localRotation, Quaternion.identity, rotateSpeed * Time.deltaTime); ;
@@ -33,15 +41,10 @@ public class Door : MonoBehaviour
         open = false;
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if ( other.tag == "Player") {
-            Open();
-        }
-    }
-
-    private void OnTriggerExit(Collider other) {
-        if (other.tag == "Player") {
-            Close();
+    private void OnTriggerStay(Collider other) {
+        if ( other.tag == "Player" || other.tag == "NPC") {
+            open = true;
+            timer = 0f;
         }
     }
 }

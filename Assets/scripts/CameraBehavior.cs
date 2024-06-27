@@ -100,6 +100,7 @@ public class CameraBehavior : MonoBehaviour
         Camera_Exit();
         photo_instance = Instantiate(photo_prefab, null);
         photo_instance.GetComponent<Photo>().rend.material.mainTexture = LastImage;
+        PictureManager.Instance.photos.Add(LastImage);
 
 
         Interacter.Instance.PickUpItem(photo_instance.GetComponent<Interactable>());
