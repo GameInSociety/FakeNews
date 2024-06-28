@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8730204916343685231
 Transform:
@@ -169,13 +169,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 5eeb53ffdb242734898aa3a46d597a81, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 26b37f3d618868445991569176b2d0d3, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 563770d29bedd104e8a7f5a14ebf0484, type: 2}
     - target: {fileID: 919132149155446097, guid: 26b37f3d618868445991569176b2d0d3, type: 3}
       propertyPath: m_Name
       value: MovieSet_WallWindow_01
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 26b37f3d618868445991569176b2d0d3, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 123
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -186,7 +190,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 26b37f3d618868445991569176b2d0d3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -6219686146517648462}
+      addedObject: {fileID: 4820553818236292175}
   m_SourcePrefab: {fileID: 100100000, guid: 26b37f3d618868445991569176b2d0d3, type: 3}
 --- !u!4 &1253185968883762025 stripped
 Transform:
@@ -198,8 +202,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 26b37f3d618868445991569176b2d0d3, type: 3}
   m_PrefabInstance: {fileID: 1652412606460159106}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &-6219686146517648462
-MeshCollider:
+--- !u!65 &4820553818236292175
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -216,7 +220,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7902836028970847217, guid: 26b37f3d618868445991569176b2d0d3, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 2.0000005, y: 3.4999998, z: 0.106922105}
+  m_Center: {x: -1, y: 1.7499999, z: 0.046091177}

@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 577d83ee9c8328a44850e9529d220221, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 577d83ee9c8328a44850e9529d220221, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 577d83ee9c8328a44850e9529d220221, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 577d83ee9c8328a44850e9529d220221, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 577d83ee9c8328a44850e9529d220221, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -62,14 +62,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 577d83ee9c8328a44850e9529d220221, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -1540141861987449294}
+      addedObject: {fileID: 3429128957955798096}
   m_SourcePrefab: {fileID: 100100000, guid: 577d83ee9c8328a44850e9529d220221, type: 3}
 --- !u!1 &6696064829215980077 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 577d83ee9c8328a44850e9529d220221, type: 3}
   m_PrefabInstance: {fileID: 5777092124414216060}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &-1540141861987449294
+--- !u!64 &3429128957955798096
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,4 +90,4 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4906539554390585678, guid: 577d83ee9c8328a44850e9529d220221, type: 3}
+  m_Mesh: {fileID: 7437117359222740367, guid: 577d83ee9c8328a44850e9529d220221, type: 3}

@@ -3,7 +3,12 @@ guid: 9d825af0c504b7b4ea1d88ba5f025e76
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_MovieSet
+    second: {fileID: 2100000, guid: 05921a5b7aa96c54da1526e6da6e1b85, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

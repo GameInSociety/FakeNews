@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1f67b27d182bd2e4db122843d767999a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f67b27d182bd2e4db122843d767999a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f67b27d182bd2e4db122843d767999a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f67b27d182bd2e4db122843d767999a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f67b27d182bd2e4db122843d767999a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -62,15 +62,15 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f67b27d182bd2e4db122843d767999a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -8762458099561010393}
+      addedObject: {fileID: -4092748106963560006}
   m_SourcePrefab: {fileID: 100100000, guid: 1f67b27d182bd2e4db122843d767999a, type: 3}
 --- !u!1 &8010014503519910126 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f67b27d182bd2e4db122843d767999a, type: 3}
   m_PrefabInstance: {fileID: 7199039263550916031}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &-8762458099561010393
-MeshCollider:
+--- !u!65 &-4092748106963560006
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -87,7 +87,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5662647692567632758, guid: 1f67b27d182bd2e4db122843d767999a, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 2, y: 4.0000005, z: 0.21818137}
+  m_Center: {x: -1, y: 1.9999998, z: 0.00909451}

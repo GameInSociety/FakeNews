@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_Black
+    second: {fileID: 2100000, guid: de0ea4c32c3b20c42a1f3ce90276005d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: M_Concrete
     second: {fileID: 2100000, guid: c01f4b1bcc71c7947b196022d2335594, type: 2}
   - first:

@@ -3,7 +3,12 @@ guid: af7b9930e43c10c418e400d5f86d998d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_GreenScreen
+    second: {fileID: 2100000, guid: dd59cd7cfd8ab0c468e915a4e3be9886, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

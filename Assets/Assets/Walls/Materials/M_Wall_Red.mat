@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Wall 1
+  m_Name: M_Wall_Red
   m_Shader: {fileID: -6465566751694194690, guid: 2c073a80f93f8e640b9aa011685c6e07, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Base_Map:
-        m_Texture: {fileID: 2800000, guid: 0377e9165f8cf4543a14b330b05e6881, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -77,11 +77,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicSmoothness_Map:
-        m_Texture: {fileID: 2800000, guid: 10c4de70b4c409d4c93c7c7eb09b97bc, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_Map:
-        m_Texture: {fileID: 2800000, guid: 8608ad0bdd812c24f8bc98ddd4082fef, type: 3}
+        m_Texture: {fileID: 2800000, guid: f4e13c9be884f5b4da5e24c41912f97a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -140,7 +140,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _Normal_Strength: 0
+    - _Normal_Strength: 1
     - _OcclusionStrength: 1
     - _Opacity: 1
     - _Parallax: 0.005
@@ -155,7 +155,7 @@ Material:
     - _Surface: 0
     - _Tiling: 1
     - _Triplanar_Blend: 1
-    - _Triplanar_Tiling: 1
+    - _Triplanar_Tiling: 2
     - _Use_Base_Map: 0
     - _Use_Details: 0
     - _Use_Details_Triplanar: 0
@@ -168,7 +168,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Base_Color: {r: 1, g: 0.9144338, b: 0.8132075, a: 1}
+    - _Base_Color: {r: 1, g: 0.72630006, b: 0.65471697, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Details_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Details_Offset: {r: 0, g: 0, b: 0, a: 0}
@@ -176,6 +176,7 @@ Material:
     - _Emissive_Color: {r: 0, g: 0, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Triplanar_Offset: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8839508630397988748
