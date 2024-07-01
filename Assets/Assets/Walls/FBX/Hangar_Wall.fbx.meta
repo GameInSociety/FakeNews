@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 93c7698693270384c93c68ba5590d926
+guid: 34c4bb667cc6ffa408fbd3fce2b5f4fa
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_GreenScreen
-    second: {fileID: 2100000, guid: dd59cd7cfd8ab0c468e915a4e3be9886, type: 2}
+      name: M_Concrete_Black
+    second: {fileID: 2100000, guid: 9ce88b9732c08304c8ac0baf9dacb47e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_MovieSet
-    second: {fileID: 2100000, guid: 05921a5b7aa96c54da1526e6da6e1b85, type: 2}
+      name: M_Concrete_White
+    second: {fileID: 2100000, guid: b8e9bd2b3ccd5144d8e1eba628223398, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Concrete_Yellow
+    second: {fileID: 2100000, guid: 61eac254f64b1fd4f9ef39c10b1e33cc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
