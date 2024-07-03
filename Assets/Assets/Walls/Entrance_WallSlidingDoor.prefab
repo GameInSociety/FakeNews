@@ -55,7 +55,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 33e99277707b38b4dad8972e20155c53, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5117dfcc68206a944b99e18e393d1bcb, type: 2}
+      objectReference: {fileID: 2100000, guid: 9d8c03336cdcdf54a8a4b9ada586efe6, type: 2}
     - target: {fileID: 919132149155446097, guid: 33e99277707b38b4dad8972e20155c53, type: 3}
       propertyPath: m_Name
       value: Entrance_WallSlidingDoor
