@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,23 +18,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 7.499986
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.0000030398369
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -51,6 +51,10 @@ PrefabInstance:
     - target: {fileID: -2122531217964052207, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -1448242164318225647, guid: 0845da40e748bf54d944be643788556b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_Name
@@ -63,6 +67,10 @@ PrefabInstance:
     - target: {fileID: 2246554733533420797, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118728686586066950, guid: 0845da40e748bf54d944be643788556b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.75
       objectReference: {fileID: 0}
     - target: {fileID: 3845281377638540807, guid: 0845da40e748bf54d944be643788556b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -144,8 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 4838059919439827831}
   targetAngle: 120
-  rotateSpeed: 10
-  timeToClose: 2
+  rotateSpeed: 20
+  timeToClose: 5
 --- !u!114 &8329999710774734913
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6685657572868026227, guid: 9fc6e71eec52bc646a08df36b2dc4611, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9fc6e71eec52bc646a08df36b2dc4611, type: 3}
       propertyPath: m_Name
       value: Door_03
