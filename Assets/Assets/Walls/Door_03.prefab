@@ -93,7 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 7984177456123942759}
   targetAngle: 120
-  rotateSpeed: 10
+  rotateSpeed: 3
   timeToClose: 2
 --- !u!65 &-26734565827176159
 BoxCollider:
