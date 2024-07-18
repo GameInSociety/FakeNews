@@ -55,7 +55,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5a06a7e06f09cc74c9d445eb18a20bd9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -111,7 +111,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5a06a7e06f09cc74c9d445eb18a20bd9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -256,7 +256,7 @@ Material:
     - _IridescenceThickness: 1
     - _LinkDetailsWithBase: 0
     - _MaterialID: 1
-    - _Metallic: 0
+    - _Metallic: 0.745
     - _MetallicRemapMax: 0
     - _MetallicRemapMin: 0
     - _Mode: 0
@@ -279,7 +279,7 @@ Material:
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
-    - _Smoothness: 0
+    - _Smoothness: 0.173
     - _SmoothnessRemapMax: 0
     - _SmoothnessRemapMin: 0
     - _SmoothnessTextureChannel: 0
