@@ -84,7 +84,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2293124f149cf75439e9131b5700d44a, type: 3}
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
-      objectReference: {fileID: 2100000, guid: ea098c9c42de9ec48a7fe344893cc90f, type: 2}
+      objectReference: {fileID: 2100000, guid: 563770d29bedd104e8a7f5a14ebf0484, type: 2}
     - target: {fileID: 919132149155446097, guid: 2293124f149cf75439e9131b5700d44a, type: 3}
       propertyPath: m_Name
       value: Facade_Bottom_Door
@@ -154,8 +154,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6647129, y: 4.402243, z: 0.8267027}
-  m_Center: {x: -5.3676434, y: 2.0703156, z: -0.19112481}
+  m_Size: {x: 0.6647129, y: 4.402243, z: 0.6279735}
+  m_Center: {x: -5.3676434, y: 2.0703156, z: -0.2904894}
 --- !u!1001 &6498320740465475848
 PrefabInstance:
   m_ObjectHideFlags: 0
