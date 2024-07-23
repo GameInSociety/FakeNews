@@ -1,14 +1,16 @@
 fileFormatVersion: 2
-guid: f6ce89d0a0202cd4795870877cbfd1ad
-PrefabImporter:
+guid: f47c3332cc1e27e429e62f14a27f814d
+timeCreated: 18446744011573954816
+NativeFormatImporter:
   externalObjects: {}
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 204933
-  packageName: DevDen ArchViz Vol 1 - Scotland URP
-  packageVersion: 1.1
-  assetPath: Assets/DevDen Arch Viz Scotland/Prefabs/Bathroom/shower.prefab
-  uploadId: 674786
+  productId: 7717
+  packageName: Big Furniture Pack
+  packageVersion: 1.3
+  assetPath: Assets/BigFurniturePack/Prefabs/Bathroom/shower.prefab
+  uploadId: 218289
