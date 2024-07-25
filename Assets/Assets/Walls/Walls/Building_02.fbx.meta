@@ -1,9 +1,34 @@
 fileFormatVersion: 2
-guid: 7175a30f1dd1bd54bace876ca78de856
+guid: 5307801f13304744b9c384116232d22d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ConcreteGrey
+    second: {fileID: 2100000, guid: 8887ed81c2fd62d4cb15d61d6fb4ec80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ConcreteWhite
+    second: {fileID: 2100000, guid: c01f4b1bcc71c7947b196022d2335594, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Glass
+    second: {fileID: 2100000, guid: 563770d29bedd104e8a7f5a14ebf0484, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wall
+    second: {fileID: 2100000, guid: 5117dfcc68206a944b99e18e393d1bcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wood
+    second: {fileID: 2100000, guid: 2919e09230e4c794c8df2bf5c4242a3c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
