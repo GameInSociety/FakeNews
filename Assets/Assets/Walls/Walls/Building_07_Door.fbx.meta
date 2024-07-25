@@ -1,13 +1,43 @@
 fileFormatVersion: 2
-guid: c9f336a4dae8354458eba2178d07483c
+guid: 1fa403087dbc7e045ae27be319a87c1a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Curtains
+    second: {fileID: 2100000, guid: e0f7d7ac43d773f4a908664104f41ffe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ConcreteGrey
+    second: {fileID: 2100000, guid: 8887ed81c2fd62d4cb15d61d6fb4ec80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ConcreteWhite
+    second: {fileID: 2100000, guid: c01f4b1bcc71c7947b196022d2335594, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_FrostedGlass2
+    second: {fileID: 2100000, guid: 563770d29bedd104e8a7f5a14ebf0484, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wall
+    second: {fileID: 2100000, guid: 79edf8c83ff667d4298e7ff0d3d5a171, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wood
+    second: {fileID: 2100000, guid: 9a21eb46837654f4f84d01d31001741d, type: 2}
   materials:
     materialImportMode: 2
-    materialName: 0
-    materialSearch: 1
+    materialName: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
