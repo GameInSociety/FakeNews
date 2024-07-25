@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_ConcreteGrey
+  m_Name: M_Concrete_Yellow
   m_Shader: {fileID: -6465566751694194690, guid: 2c073a80f93f8e640b9aa011685c6e07, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -140,7 +140,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _Normal_Strength: 2
+    - _Normal_Strength: 1
     - _OcclusionStrength: 1
     - _Opacity: 0
     - _Parallax: 0.005
@@ -168,7 +168,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Base_Color: {r: 0.6754716, g: 0.6754716, b: 0.6754716, a: 0}
+    - _Base_Color: {r: 1, g: 0.8126813, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Details_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Details_Offset: {r: 0, g: 0, b: 0, a: 0}

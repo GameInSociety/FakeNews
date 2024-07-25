@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8428638180221808345}
   m_Layer: 0
-  m_Name: Facade_Corner
+  m_Name: Facade_Packed_Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

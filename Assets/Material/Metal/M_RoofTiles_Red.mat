@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TinRoof
+  m_Name: M_RoofTiles_Red
   m_Shader: {fileID: -6465566751694194690, guid: 2c073a80f93f8e640b9aa011685c6e07, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -139,16 +139,16 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.421
     - _GlossyReflections: 1
-    - _Metallic: 1
+    - _Metallic: 0
     - _Mode: 0
-    - _Normal_Strength: 1
+    - _Normal_Strength: 0
     - _OcclusionStrength: 1
     - _Opacity: 0
     - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.205
+    - _Smoothness: 0.304
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -161,16 +161,16 @@ Material:
     - _Use_Base_Map: 1
     - _Use_Details: 0
     - _Use_Details_Triplanar: 0
-    - _Use_Emissive_Map: 1
+    - _Use_Emissive_Map: 0
     - _Use_MetallicSmoothness_Map: 0
-    - _Use_Normal_Map: 0
-    - _Use_Occlusion_Map: 1
+    - _Use_Normal_Map: 1
+    - _Use_Occlusion_Map: 0
     - _Use_Triplanar: 1
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.589, g: 0.589, b: 0.589, a: 1}
-    - _Base_Color: {r: 0.690566, g: 0.690566, b: 0.690566, a: 0}
+    - _Base_Color: {r: 0.87169814, g: 0.5035016, b: 0.46545386, a: 0}
     - _Color: {r: 0.589, g: 0.589, b: 0.589, a: 1}
     - _Details_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Details_Offset: {r: 0, g: 0, b: 0, a: 0}
