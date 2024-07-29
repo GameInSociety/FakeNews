@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 4824128979516461876}
   - component: {fileID: 8457025807237258385}
   - component: {fileID: 5960957639283239003}
-  - component: {fileID: 8682227346539599441}
+  - component: {fileID: 8932986181872024232}
   m_Layer: 0
   m_Name: ShortBarrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4824128979516461876
 Transform:
@@ -86,8 +86,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8682227346539599441
-MeshCollider:
+--- !u!65 &8932986181872024232
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -104,7 +104,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1653860669104874902, guid: 89404c3dc4f490b48a0018f721969b83, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 2.4249222, y: 3.7593374, z: 0.39416376}
+  m_Center: {x: -0.059416175, y: 1.8841784, z: -4.382358e-17}

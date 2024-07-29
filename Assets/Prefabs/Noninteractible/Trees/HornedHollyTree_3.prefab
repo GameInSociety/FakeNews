@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5771552536942209234}
-  - component: {fileID: -8743489567014088984}
+  - component: {fileID: 7451593110646286122}
   m_Layer: 0
   m_Name: HornedHollyTree_3
   m_TagString: Untagged
@@ -119,7 +119,7 @@ Transform:
   - {fileID: 3299540247082548315}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &-8743489567014088984
+--- !u!65 &7451593110646286122
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,5 +138,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.29284108, y: 2.588541, z: 0.25886786}
+  m_Center: {x: -0.02859962, y: 1.2108784, z: 0.017813846}
