@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: cf951488e1ca04e4a8b7ac9075aeff05, type: 3}
       propertyPath: m_Name
-      value: airconditioner
+      value: AirConditioner_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cf951488e1ca04e4a8b7ac9075aeff05, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cf951488e1ca04e4a8b7ac9075aeff05, type: 3}
       propertyPath: m_LocalPosition.x

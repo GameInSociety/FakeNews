@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 64
   m_IsActive: 1
 --- !u!4 &5146330197779048141
 Transform:
@@ -203,11 +203,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 00028e90867c49a4895f9f59c272b101, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4088804727890097913, guid: 00028e90867c49a4895f9f59c272b101, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4538685478597243641, guid: 00028e90867c49a4895f9f59c272b101, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -301,6 +301,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04263a4c128794660a38e89b08f60d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
+  _linkedItem:
+    id: 
+    displayName: 
+    phrase_start: 
+    phrase_setup: 
+    phrase_end: 
   able: 1
   initRot: {x: 0, y: 0, z: 0, w: 0}
   turnToCam: 0

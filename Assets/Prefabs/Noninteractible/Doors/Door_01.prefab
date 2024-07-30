@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -728046640454176129, guid: a0f464876f0654d4d9edd5ee7d99021b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a0f464876f0654d4d9edd5ee7d99021b, type: 3}
       propertyPath: m_Name
@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a0f464876f0654d4d9edd5ee7d99021b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 2541840859129327162, guid: a0f464876f0654d4d9edd5ee7d99021b, type: 3}
       propertyPath: m_LocalPosition.z

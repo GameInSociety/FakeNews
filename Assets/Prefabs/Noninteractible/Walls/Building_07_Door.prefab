@@ -158,6 +158,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 927909559101449584}
     m_Modifications:
+    - target: {fileID: 683626140527616207, guid: 806233c4c2ef6f14899465695f085494, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 968040443001291080, guid: 806233c4c2ef6f14899465695f085494, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.015

@@ -54,11 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a37a26471fe071544ae89ef29408124b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 3835086697453149932, guid: a37a26471fe071544ae89ef29408124b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -140,6 +140,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04263a4c128794660a38e89b08f60d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
+  _linkedItem:
+    id: 
+    displayName: 
+    phrase_start: 
+    phrase_setup: 
+    phrase_end: 
   able: 1
   initRot: {x: 0, y: 0, z: 0, w: 0}
   turnToCam: 0

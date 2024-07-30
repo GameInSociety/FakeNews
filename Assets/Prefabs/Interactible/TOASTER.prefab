@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 35fae08d00cdc8c40a63ec5ebc62d54a, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 35fae08d00cdc8c40a63ec5ebc62d54a, type: 3}
       propertyPath: m_Name
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 35fae08d00cdc8c40a63ec5ebc62d54a, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 35fae08d00cdc8c40a63ec5ebc62d54a, type: 3}
       propertyPath: m_LocalPosition.x

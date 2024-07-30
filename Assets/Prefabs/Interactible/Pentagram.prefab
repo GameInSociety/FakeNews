@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pentagram
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 39f0a541863666545b2c62dc922bdc0e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -121,6 +125,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: _satan_cercle
+  _linkedItem:
+    id: 
+    displayName: 
+    phrase_start: 
+    phrase_setup: 
+    phrase_end: 
   able: 1
   initRot: {x: 0, y: 0, z: 0, w: 0}
   turnToCam: 0

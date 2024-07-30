@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8c24fc02c1eb8fa418ce4f7838526d8f, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8c24fc02c1eb8fa418ce4f7838526d8f, type: 3}
       propertyPath: m_LocalScale.x

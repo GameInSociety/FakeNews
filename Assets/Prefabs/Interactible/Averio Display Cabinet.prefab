@@ -54,11 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 18e04ab5fa4fe8644b737c0c4500053e, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4415459520323897525, guid: 18e04ab5fa4fe8644b737c0c4500053e, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 5403043592863393643, guid: 18e04ab5fa4fe8644b737c0c4500053e, type: 3}
       propertyPath: m_StaticShadowCaster
@@ -156,6 +156,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04263a4c128794660a38e89b08f60d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
+  _linkedItem:
+    id: 
+    displayName: 
+    phrase_start: 
+    phrase_setup: 
+    phrase_end: 
   able: 1
   initRot: {x: 0, y: 0, z: 0, w: 0}
   turnToCam: 0

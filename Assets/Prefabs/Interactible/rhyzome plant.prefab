@@ -56,9 +56,21 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: bf4a0e1f7672884498a8ae055bc86f75, type: 2}
+    - target: {fileID: -283703087532773527, guid: 0146f4ac92c28194baab261a4a4063e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0146f4ac92c28194baab261a4a4063e5, type: 3}
       propertyPath: m_Name
       value: rhyzome plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0146f4ac92c28194baab261a4a4063e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185987954058356810, guid: 0146f4ac92c28194baab261a4a4063e5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -92,6 +104,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: _plant
+  _linkedItem:
+    id: 
+    displayName: 
+    phrase_start: 
+    phrase_setup: 
+    phrase_end: 
   able: 1
   initRot: {x: 0, y: 0, z: 0, w: 0}
   turnToCam: 0

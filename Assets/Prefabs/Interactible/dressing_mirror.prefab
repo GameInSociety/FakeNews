@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1ae81928219d4a443b7172bffd15591a, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 1ae81928219d4a443b7172bffd15591a, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1ae81928219d4a443b7172bffd15591a, type: 3}
       propertyPath: m_LocalPosition.x

@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 47de2e6dfeddbdd459c21d02303870d9, type: 3}
       propertyPath: m_Name
-      value: carpet (1)
+      value: Carpet
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 47de2e6dfeddbdd459c21d02303870d9, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 47de2e6dfeddbdd459c21d02303870d9, type: 3}
       propertyPath: m_LocalPosition.x

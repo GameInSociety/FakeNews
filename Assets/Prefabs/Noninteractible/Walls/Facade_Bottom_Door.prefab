@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_03
       objectReference: {fileID: 0}
+    - target: {fileID: 2455844848365527412, guid: 0b022bd4f18ff1c4bbc65f6346dcac40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2981164478415813582, guid: 0b022bd4f18ff1c4bbc65f6346dcac40, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.2849965
@@ -177,6 +181,10 @@ PrefabInstance:
     - target: {fileID: 2981164478415813582, guid: 0b022bd4f18ff1c4bbc65f6346dcac40, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7474346908646184823, guid: 0b022bd4f18ff1c4bbc65f6346dcac40, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
