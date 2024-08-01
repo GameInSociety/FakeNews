@@ -86,7 +86,8 @@ PrefabInstance:
       value: Facade_Bottom_Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2074820189737714648, guid: 4335ac1fb848c214da52ad9b3049ba03, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4335ac1fb848c214da52ad9b3049ba03, type: 3}
