@@ -1,11 +1,40 @@
-"ID QUEST","Nom de la quête","Nom de ""l'article"" fini","Objectif","Indices","[ITEM1]","Value","[ITEM2]","Value","[ITEM3]","Value","[ITEM4]","Value"
-"_QUEST1","Le restaurant chez Tony","Les meilleurs pates du marché !","","J'adore allez chez Tony leur pates sont incroyables !","_pasta","10","","","","","",""
-"_QUEST2 ","Scandale chez Tony !","Des insectes dans leurs plats ?!","","J'ai entendu du dire qu'il y avait eu une inspection d'hygiène chez Tony, des cafards apparement. Mais c'est seulement une rumeur !","_pasta","10","_corkroach","150","","","",""
-"_QUEST3","La fermeture du restaurant ?","C'est un complot de l'état !","","Ce n'est pas possible que Tony ferme ! C'est forcément quelqu'un qui a voulu le saboter !","_pasta","10","_corkroach","150","_mannequin","100","",""
-"_QUEST4","Ils font plus que l'on pourrait le croire !","Et si Tony n'était pas le seul ?","","Si Tony a vraiment été saboté par l'état, rien ne nous dit qu'ils ne font rien d'autre ! Peut être qu'il me surveille moi !","_photo_employer","150","_camera","300","","","",""
-"_QUEST5","Pour qui travaille-t-il ?","Ils nous controlent dans l'ombre des grands de ce monde !","","En vrai, il y a forcément quelqu'un qui contrôle tout ? Tout est trop bien coordonnées !","_photo_employer","200","_camera","300","_alien_mannequin","150","",""
-"_QUEST6","Un grands voyage spatial !","Les Américains les premiers sur la lune !","","C'est impressionant, c'est toujours les américains qui font tout en premier même aller sur la lune !","","","","","","","",""
-"_QUEST7","Les Américains sont un mensonges !","Toujours les mêmes mensonges des américains","","Je ne peux pas croire que ce soit les américains qui soit aller sur la lune ! Il doit y avoir une preuve ou quelque chose pour prouver qu'ils n'y sont pas aller !","_usa_flag","100","_astronaute","150","_camera","200","",""
-"_QUEST8","Un petit pas pour l'homme FRANCAIS","Les français y étaient avant !",""," C'est incroyable que les américains ne soit jamais aller sur la lune ! Et que ce soit les français qui ai planté leur drapeau","_astronaute","100","_french_flag","150","","","",""
-"_QUEST9","Il fait chaud en hiver !","Des températures anormal cette saison !","","On est en février et il fait aussi chaud ? C''est pas possible regarde moi ce thermostats","_snowman","100","_thermometer","150","","","",""
-"_QUEST10","On s'était tromper !","Le stagiaire avait oublier le chauffage !","","C'est quand même bizarre qu'il fasse vraiment aussi chaud pour un hiver, doit forcément y avoir quelque chose qui fait monter la chaleur !","_snowman","100","_thermometer","150","_radiator","300","",""
+"ID QUEST Jour 1 _QUEST1 Jour 2","Nom de la quête Home Sweet Home ","Nom de ""l'article"" fini Un repos bien mérité ! ","Dialogues début ","Dialogues fin ","Indices Rien de mieux que d'être assis devant la télé avec une bonne boisson chaude ! ","[ITEM1] _tea ","Value ","[ITEM2] _tv ","Value ","[ITEM3] ","Value ","[ITEM4] ","Value ","","","","","","","","","","","","","","",""
+"_QUEST2 ","Un nouvelle italien !","Chez Tony, les meilleurs pâtes de votre région !","Bonjour, je suis Flatty John, votre serviteur. Nous sommes ravis de vous accueillir parmi nous. Si vous l’acceptez, nous serions enchantés de vous donner de nouvelles missions. Vos talents sont remarquables. Wololo
+Un de nos clients, Joe Pasta, nous a commandé une campagne de communication autour de leur livraison de pâtes. Il souhaiterait que vous réalisiez une belle photo de ses pâtes depuis chez vous. 
+Cela doit être authentique como a la casa. 
+Revenez me voir dès que vous êtes fiers de vous.
+","Excellent ! L’Italie est dans votre assiette. Revenez demain si vous souhaitez continuer.","J'adore allez chez Tony leur pates sont incroyables !","_pasta","10","_cartonjoepasta","150","","","","","","","","","","","","","","","","","","",""
+"Jour 3","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"_QUEST3","Scandale chez Tony !","Des insectes dans leurs plats ?!","Wololo. Le succès de votre post a été EX-TRA-OR-DI-NAIRE. Regardez sur l’écran. 
+Mais nous avons remarqué une trend qui monte de manière spectaculaire : le problème sanitaire de chez Joe Pasta fait encore plus le buzz. 
+Nous avons une nouvelle demande. Vous avez encore votre plat de pâtes ? 
+Hmmm. Faites moi une belle photo dégoûtante. Avec un nuisible par exemple ?
+","Même moi ça me dégoute ! Prendre cette photo devait être une torture, on verra demain ce que les gens en disent !","J'ai entendu du dire qu'il y avait eu une inspection d'hygiène chez Tony, des cafards apparement. Mais c'est seulement une rumeur !","_pasta","10","_corkroach","150","","","","","","","","","","","","","","","","","","",""
+"Jour 4","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"_QUEST4","Un petit truc en plus","Des insectes à la place de la viande ?!?","Wo wo wo. PHE-NO-ME-NAL! Votre photo a réussi à fédérer deux groupes : les anti junk food mais aussi un groupe qui croit qu’on veut remplacer la viande par des insectes. 
+Ils sont super actifs. 
+On teste quelque chose?
+","Si on ne touche pas tout le monde avec cette photo c'est que le monde marche sur la tête ! Revenez demain pour continuer.
+","En soit ta photo d'hier pourrait fonctionner mais il en faudrait plus.","_pasta","","_corkroach","","_corkroach","","","","","","","","","","","","","","","","","",""
+"Jour 5","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"_QUEST5","Sale temps pour les insectes","Les élites vous mentent !","“Bon, là cela devient très intéressant. Votre cliché est présenté comme la preuve de la volonté des élites de nous faire manger des insectes pour lutter contre le réchauffement climatique. 
+Je crois qu’on peut les exciter un peu.
+","Ce qui est sûr c'est que je n'en mangerais pas personnellement ! Nous verrons demain le résultats de ton travail. ","Il faut quelque chose pour montrer que le réchauffement climatique est le lien !","_pasta","","_corkroach","","_posterclimatic","","","","","","","","","","","","","","","","","",""
+"Jour 6","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"_QUEST6","Ils élèvent des insectes sous nos maisons","Ils ont raisons ! On va être contrôlé !","Oulha lha. Quelle histoire ! J’ai trouvé ce groupe qui dénonce l’existence d’un grand réseau souterrain dans lequel les élites élèvent des cafards mutant en masse. En réalité, c’est un grand projet pour nous chipper tous. 
+Tu manges un cafard, une microchip se déploie pour qu’ils nous contrôlent.
+Je crois qu’au bout de la rue on pourrait faire un photo sympa
+","Qu'est-ce que les gens peuvent être crédule ! Mais avec des photos comme les votres je pourrais presque y croire aussi ! Revenez demain","Il doit y avoir une bouche d'égout au fond de la rue.","_corkroach","","_sewer","","","","","","","","","","","","","","","","","","","",""
+"Jour 7","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"_QUEST7","Cafard from hell","Les élites aussi sont contôlé par quelque chose dans l'ombre !","OK.Wololo. Nous avons le filon. Les gens A-DO-RENT. Certains disent même que le diable pourrait être lier à toutes ses histoires !
+Mais nous allons avoir besoin de plus de matériel. Je te propose de passer dans notre hangar rempli d’ustensiles, costumes et éléments de décor. 
+On pourrait tester le coup des sataniques
+","Comme on dit, le ridicule ne tue pas mais au moins maintenant, on les a dans la poche ! Et je suis sûr que si l'on continue comme ça, on les controlera comme des petits chiens ! Revenez demain pour continuer votre travail.","Je crois qu'il doit nous rester un cercle satanique quelque part.","_corkroach","","_satan_cercle","","","","","","","","","","","","","","","","","","","",""
+"Jour 8","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"_QUEST8","Le comité de résistance
+","","Le CDR : “A ton attention. 
+Nous avons remarqué.
+Ils te contrôlent.  
+Nous pouvons t’aider. 
+Nous avons besoin d’une preuve.
+Elle se trouve dans le bureau”","","","","","","","","","","","","","","","","","","","","","","","","",""
