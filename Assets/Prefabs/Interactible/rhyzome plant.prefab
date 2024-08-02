@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0146f4ac92c28194baab261a4a4063e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.599875
+      value: 1.1899996
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0146f4ac92c28194baab261a4a4063e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9894142
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0146f4ac92c28194baab261a4a4063e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.462032
+      value: -1.6400001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0146f4ac92c28194baab261a4a4063e5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: bf4a0e1f7672884498a8ae055bc86f75, type: 2}
     - target: {fileID: -283703087532773527, guid: 0146f4ac92c28194baab261a4a4063e5, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 64
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0146f4ac92c28194baab261a4a4063e5, type: 3}
       propertyPath: m_Name
@@ -66,11 +66,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0146f4ac92c28194baab261a4a4063e5, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 64
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4185987954058356810, guid: 0146f4ac92c28194baab261a4a4063e5, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 64
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -133,8 +133,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 75.1, y: 100, z: 73.3}
+  m_Center: {x: 0, y: 73.77, z: 0}
 --- !u!54 &483370003149647489
 Rigidbody:
   m_ObjectHideFlags: 0
