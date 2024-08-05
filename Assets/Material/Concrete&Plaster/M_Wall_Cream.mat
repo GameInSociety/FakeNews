@@ -155,7 +155,7 @@ Material:
     - _Surface: 0
     - _Tiling: 1
     - _Triplanar_Blend: 1
-    - _Triplanar_Tiling: 2
+    - _Triplanar_Tiling: 0.5
     - _Use_Base_Map: 0
     - _Use_Details: 0
     - _Use_Details_Triplanar: 0
