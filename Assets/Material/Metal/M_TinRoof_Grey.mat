@@ -156,7 +156,7 @@ Material:
     - _Surface: 0
     - _Tiling: 1
     - _Triplanar_Blend: 0.5
-    - _Triplanar_Tiling: 0.05
+    - _Triplanar_Tiling: 0.1
     - _UVSec: 0
     - _Use_Base_Map: 1
     - _Use_Details: 0

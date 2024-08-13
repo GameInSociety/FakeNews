@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_ConcreteWhite
+    second: {fileID: 2100000, guid: c01f4b1bcc71c7947b196022d2335594, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: M_MovieSet
     second: {fileID: 2100000, guid: 05921a5b7aa96c54da1526e6da6e1b85, type: 2}
   - first:
