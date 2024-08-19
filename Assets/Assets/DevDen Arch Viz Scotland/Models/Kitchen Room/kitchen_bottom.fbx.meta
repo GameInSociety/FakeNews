@@ -1,7 +1,14 @@
 fileFormatVersion: 2
 guid: 5953c93a3133177479d85c596497a194
+AssetOrigin:
+  serializedVersion: 1
+  productId: 204933
+  packageName: DevDen ArchViz Vol 1 - Scotland URP
+  packageVersion: 1.1
+  assetPath: Assets/DevDen Arch Viz Scotland/Models/Kitchen Room/kitchen_bottom.fbx
+  uploadId: 674786
 ModelImporter:
-  serializedVersion: 21202
+  serializedVersion: 22200
   internalIDToNameTable:
   - first:
       1: 100000
@@ -1090,6 +1097,46 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_Metal1
+    second: {fileID: 2100000, guid: 60ba0110ad2c48a40b8f2e91bc96f406, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Metal2
+    second: {fileID: 2100000, guid: 783bc178246db014aaab079742fec3da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Metal3
+    second: {fileID: 2100000, guid: 15ee22aa0cfdcc942a7d2a7949bb76a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Plastic
+    second: {fileID: 2100000, guid: b7327121bbea35244948829029a80d60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Plastic_Black
+    second: {fileID: 2100000, guid: c35a40a55aa9ef841baa6ce1aaf8e0e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_White
+    second: {fileID: 2100000, guid: 366679cf3713065428e131e78f9593ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wood
+    second: {fileID: 2100000, guid: 888daeabd7af8694783c9a32a9ca19d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wood_Blue
+    second: {fileID: 2100000, guid: 8868a35d77b4066478f72d21baacec0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: glass
     second: {fileID: 2100000, guid: 5799935e9d8e7c047a97465247c5f73f, type: 2}
   - first:
@@ -1106,7 +1153,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: green_wood
-    second: {fileID: 2100000, guid: b79e4d4451b07714b978535f06b9b11b, type: 2}
+    second: {fileID: 2100000, guid: 8868a35d77b4066478f72d21baacec0f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -1121,7 +1168,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: switch1
-    second: {fileID: 2100000, guid: b24e8bf6f46cd704784e1c3c6425881a, type: 2}
+    second: {fileID: 2100000, guid: 6a76e7af6b1ec1147a48ad88ee029051, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -1134,8 +1181,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -1159,6 +1204,7 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 0
     importBlendShapes: 0
     importCameras: 0
@@ -1186,6 +1232,7 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -1218,14 +1265,9 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 204933
-  packageName: DevDen ArchViz Vol 1 - Scotland URP
-  packageVersion: 1.1
-  assetPath: Assets/DevDen Arch Viz Scotland/Models/Kitchen Room/kitchen_bottom.fbx
-  uploadId: 674786

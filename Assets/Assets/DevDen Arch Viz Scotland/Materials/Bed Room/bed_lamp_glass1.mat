@@ -16,6 +16,7 @@ Material:
   - _METALLICSPECGLOSSMAP
   - _NORMALMAP
   - _OCCLUSIONMAP
+  - _RECEIVE_SHADOWS_OFF
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _METALLICGLOSSMAP
@@ -125,7 +126,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueOffset: 0
-    - _ReceiveShadows: 1
+    - _ReceiveShadows: 0
     - _ReflectionIntensity: 1.03
     - _Refraction: 0.939
     - _Smoothness: 1

@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_ConcreteWhite
+    second: {fileID: 2100000, guid: c01f4b1bcc71c7947b196022d2335594, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: M_Concrete_Black
     second: {fileID: 2100000, guid: 27d05d52321b09d4eacf65de2f7dd901, type: 2}
   - first:
