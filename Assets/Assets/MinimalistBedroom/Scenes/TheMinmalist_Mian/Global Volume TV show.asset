@@ -128,7 +128,7 @@ MonoBehaviour:
     m_Value: {r: 1, g: 0.919603, b: 0.7528302, a: 1}
   highQualityFiltering:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   downscale:
     m_OverrideState: 0
     m_Value: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
   active: 1
   type:
     m_OverrideState: 1
-    m_Value: 6
+    m_Value: 1
   intensity:
     m_OverrideState: 1
     m_Value: 1
