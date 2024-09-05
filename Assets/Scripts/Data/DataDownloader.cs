@@ -72,9 +72,11 @@ public class DataDownloader : MonoBehaviour {
             newQuest.id = cells[0];
             newQuest.name = cells[1];
             newQuest.article = cells[2];
-            newQuest.clue = cells[4];
+            newQuest.dialogue_start= cells[3];
+            newQuest.dialogue_end= cells[4];
+            newQuest.clue = cells[5];
 
-            for (int i = 5; i < cells.Count; i += 2) {
+            for (int i = 6; i < cells.Count; i += 2) {
                 if (string.IsNullOrEmpty(cells[i]))
                     break;
                 newQuest.item_ids.Add(cells[i]);

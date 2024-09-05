@@ -21,10 +21,37 @@ public class Menu : MonoBehaviour
     public Text title_Text;
     public Text help_Text;
 
+    public CanvasGroup pause_group;
+    public CanvasGroup menu_group;
+    public float decal = 1f;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start() {
+        pause_group.alpha = 0f;
+    }
+
+    public void Pause() {
+
+        CameraBehavior.Instance._animator.gameObject.SetActive(false);
+        CameraBehavior.Instance.Camera_Exit();
+        FirstPersonController.instance.TurnToTarget(Boss.Instance.transform.position + Vector3.up * decal);
+        menu_group.DOFade(0f, 1f);
+        pause_group.DOFade(1f, 1f);
+    }
+
+    public void Resume() {
+        menu_group.DOFade(1f, 1f);
+        pause_group.DOFade(0f, 1f);
+        Invoke("ResumeDelay", 1f);
+    }
+    void ResumeDelay() {
+        CameraBehavior.Instance._animator.gameObject.SetActive(true);
+        FirstPersonController.instance.Resume();
+        Boss.Instance.able = true;
     }
 
     public void DisplayHelp(string msg) {

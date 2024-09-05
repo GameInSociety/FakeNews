@@ -8,9 +8,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 #if UNITY_EDITOR
-    using UnityEditor;
+using UnityEditor;
     using System.Net;
 #endif
 
@@ -444,6 +445,21 @@ public class FirstPersonController : MonoBehaviour
         }
 
         #endregion
+    }
+
+
+    public void TurnToTarget(Vector3 target) {
+        enableHeadBob = false;
+        cameraCanMove = false;
+        playerCanMove = false;
+        joint.DOLookAt(target, 0.5f);
+    }
+
+    public void Resume() {
+        joint.DOLocalRotateQuaternion(Quaternion.identity, 0.5f);
+        enableHeadBob = true;
+        cameraCanMove = true;
+        playerCanMove = true;
     }
 
     // Sets isGrounded based on a raycast sent straigth down from the player object

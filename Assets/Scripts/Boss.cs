@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using JetBrains.Annotations;
+using System.Linq;
 
 public class Boss : Interactable
 {
@@ -21,12 +22,17 @@ public class Boss : Interactable
     public string phrase_CorrectPhoto = "Super boulot !";
     public string phrase_QuestEnd = "Je n'ai plus rien à te dire rentre chez toi";
 
+    public GameObject clickFeedback;
     private bool canTake = true;
 
     public Text uiText;
 
     public Photo submittedPhoto;
 
+    int typeIndex;
+    float typeTimer = 0f;
+    public int typeCount = 2;
+    public float typeRate = 0.1f;
     float dialog_timer = 0f;
     public float dialog_rate = 5f;
     public bool dialog_speaking = false;
@@ -34,6 +40,7 @@ public class Boss : Interactable
     public LookHead lookHead;
 
     public Transform photo_anchor;
+    public CanvasGroup dialog_group;
 
     private void Awake() {
         Instance = this;
@@ -41,15 +48,40 @@ public class Boss : Interactable
 
     private void Start() {
         lookHead.SetTarget(FirstPersonController.instance.playerCamera.transform);
-        StartDialog(phrase_OnStart);
+        dialog_group.alpha = 0f;
+        camera_initpos = Camera.main.transform.localPosition;
+        Invoke("StartDelay", 3f);
     }
 
-
+    void StartDelay() {
+        StartDialog("Hey. Toi là bas. Viens me voir pour te mettre au turbin. ");
+    }
+    bool finished = false;
     private void Update() {
         if (dialog_speaking) {
+            typeTimer += Time.deltaTime;
+            if ( typeTimer >= typeRate) {
+                typeIndex += typeCount;
+                finished = typeIndex >= dialogs[dialogIndex].Length;
+                if ( typeIndex >= dialogs[dialogIndex].Length) {
+                    uiText.text = dialogs[dialogIndex];
+                } else {
+                    uiText.text = dialogs[dialogIndex].Remove(typeIndex);
+                }
+                typeTimer = 0f;
+            }
+            clickFeedback.SetActive(finished);
+
             dialog_timer += Time.deltaTime;
-            if (dialog_timer >=  dialog_rate) {
-                EndDialog();
+            if (Input.GetMouseButtonDown(0)) {
+                if (finished) {
+        typeIndex = 0;
+                    uiText.text = "";
+                    dialog_speaking = false;
+                    NextDialog();
+                } else {
+                    typeIndex = dialogs[dialogIndex].Length;
+                }
             }
         }
     }
@@ -64,7 +96,7 @@ public class Boss : Interactable
 
         var quest = QuestManager.Instance.currentQuest;
         if ( quest.currentState == Quest.State.None) {
-            StartDialog($"{phrase_debutQuete} : {quest.name}");
+            StartDialog($"{quest.dialogue_start}");
             QuestManager.Instance.CurrentQuest_Start();
         } else {
             StartDialog($"{quest.clue}");
@@ -122,9 +154,6 @@ public class Boss : Interactable
         } else {
             Invoke("CheckPhoto_GetInfo", 3f);
         }
-
-
-
     }
 
     void FreePhoto_Delay() {
@@ -193,7 +222,7 @@ public class Boss : Interactable
     }
 
     void ConfirmPhotoDelay() {
-        StartDialog(phrase_QuestEnd);
+        StartDialog(QuestManager.Instance.currentQuest.dialogue_end);
         QuestManager.Instance.CurrentQuest_Finish();
         CheckPhoto_Finish();
     }
@@ -209,15 +238,69 @@ public class Boss : Interactable
     /// dialgoues
     /// </summary>
     /// <param name="str"></param>
+    string[] dialogs;
+    public Transform cameraAnchor;
+    public int dialogIndex;
     public void StartDialog(string str) {
-        uiText.text = str;
-        dialog_timer = 0f;
-        dialog_speaking = true;
+        Debug.Log($"Starting Dialoge : {str}");
+        able = false;
+        dialog_group.transform.localScale = Vector3.zero;
+        dialog_group.DOFade(1f, 0.15f);
+        var tmpdiags = str.Split(". ").ToList();
+        if ( tmpdiags.Count == 1) {
+            dialogs = tmpdiags.ToArray();
+        } else {
+            tmpdiags.RemoveAt(tmpdiags.Count - 1);
+            dialogs = tmpdiags.ToArray();
+        }
+        Menu.Instance.Pause();
+        dialogIndex = -1;
+        Camera.main.transform.DOMove(cameraAnchor.position, 1f);
+        Camera.main.transform.DORotateQuaternion(cameraAnchor.rotation, 1f);
+        Invoke("NextDialog", 1f);
     }
 
+    public void NextDialog() {
+        dialog_speaking = false;
+        typeIndex = 0;
+        uiText.text = "";
+        Invoke("NextDialogDelay", 000f);
+    }
+    void NextDialogDelay() {
+        clickFeedback.SetActive(false);
+        typeIndex = 0;
+        dialog_group.transform.DOScale(1.1f, 0.2f).SetEase(Ease.OutBounce);
+        dialog_group.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear).SetDelay(0.2f);
+        ++dialogIndex;
+        if (dialogIndex == dialogs.Length) {
+            EndDialog();
+            return;
+        }
+        dialog_timer = 0f;
+        typeTimer = 0f;
+        Invoke("He", 0f);
+    }
+    void He() {
+        dialog_speaking = true;
+
+    }
+
+    public Vector3 camera_initpos;
     public void EndDialog() {
+        Camera.main.transform.DOLocalMove(camera_initpos, 1f);
+        Camera.main.transform.DOLocalRotateQuaternion(Quaternion.identity, 1f);
+        dialog_group.transform.DOScale(0f, 0.5f).SetEase(Ease.InBounce);
+        dialog_group.DOFade(0f, 0.5f);
         uiText.text = "";
         dialog_speaking = false;
+
+        Invoke("EndDialogDelay", 1f);
+    }
+
+    void EndDialogDelay() {
+        Menu.Instance.Resume();
+        able = true;
+
     }
 
 }

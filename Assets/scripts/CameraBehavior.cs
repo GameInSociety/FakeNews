@@ -41,6 +41,9 @@ public class CameraBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!FirstPersonController.instance.cameraCanMove)
+            return;
+
         if (Input.GetMouseButtonDown(1) && !Interacter.Instance.holdingItem) {
             if (takingPhoto) {
                 Camera_Exit();
@@ -52,8 +55,6 @@ public class CameraBehavior : MonoBehaviour
         if (takingPhoto) {
             Camera_Update();
         }
-
-
     }
 
     void Camera_Start() {
@@ -66,7 +67,7 @@ public class CameraBehavior : MonoBehaviour
             TakePicture();
     }
 
-    void Camera_Exit() {
+    public void Camera_Exit() {
         takingPhoto = false;
         _animator.SetTrigger("exit");
     }
@@ -100,8 +101,8 @@ public class CameraBehavior : MonoBehaviour
         Camera_Exit();
         photo_instance = Instantiate(photo_prefab, null);
         photo_instance.GetComponent<Photo>().rend.material.mainTexture = LastImage;
+        photo_instance.transform.position = FirstPersonController.instance.transform.position + FirstPersonController.instance.joint.forward;
         PictureManager.Instance.photos.Add(LastImage);
-
 
         Interacter.Instance.PickUpItem(photo_instance.GetComponent<Interactable>());
 

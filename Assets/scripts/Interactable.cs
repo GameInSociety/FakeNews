@@ -16,6 +16,7 @@ public class Interactable : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        
         initRot = transform.rotation;
         Rigidbody r = GetComponent<Rigidbody>();
         if (r == null)
@@ -37,6 +38,8 @@ public class Interactable : MonoBehaviour {
     }
 
     public virtual void PickUp() {
+        if (!able)
+            return;
         Interacter.Instance.holdingItem = true;
         Interacter.Instance.currentInteractable = this;
         GetComponent<Rigidbody>().isKinematic = true;
@@ -46,11 +49,6 @@ public class Interactable : MonoBehaviour {
         }
 
         transform.SetParent(Interacter.Instance.rotate_Box);
-    }
-
-    // Update is called once per frame
-    void Update() {
-
     }
 
     void Test() {

@@ -13,19 +13,16 @@ public class LookHead : MonoBehaviour
 
 
     private void Start() {
-        if (target != null) {
-            tmp_target = new GameObject().transform;
-            tmp_target.parent = transform;
-            tmp_target.name = "TmpTarget";
+        tmp_target = new GameObject().transform;
+        tmp_target.parent = transform;
+        tmp_target.name = "TmpTarget";
+        if (target != null)
             SetTarget(target);
-        }
     }
 
     private void LateUpdate() {
         if ( target == null )
-        {
             return;
-        }
         var dir = (target.position-head_Transform.position).normalized;
         tmp_target.position = Vector3.Lerp(tmp_target.position, target.position, lerpSpeed * Time.deltaTime);
         head_Transform.forward = dir;

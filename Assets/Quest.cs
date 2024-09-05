@@ -18,6 +18,8 @@ public class Quest {
     public string name;
     public string article;
     public string clue;
+    public string dialogue_start;
+    public string dialogue_end;
     public List<string> item_ids = new List<string>();
     public List<int> item_score = new List<int>();
 }
