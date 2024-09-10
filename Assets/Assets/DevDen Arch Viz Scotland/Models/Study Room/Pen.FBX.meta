@@ -1,7 +1,14 @@
 fileFormatVersion: 2
 guid: 25fc55c5734d90d4cb57161e08c99538
+AssetOrigin:
+  serializedVersion: 1
+  productId: 204933
+  packageName: DevDen ArchViz Vol 1 - Scotland URP
+  packageVersion: 1.1
+  assetPath: Assets/DevDen Arch Viz Scotland/Models/Study Room/Pen.FBX
+  uploadId: 674786
 ModelImporter:
-  serializedVersion: 21202
+  serializedVersion: 22200
   internalIDToNameTable:
   - first:
       1: 100000
@@ -134,12 +141,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Aluminium Black Anodized
-    second: {fileID: 2100000, guid: e68e525f33262b5458f939fda55624cb, type: 2}
+    second: {fileID: -7482756901047128693, guid: 401e6b7c0afd3344db7c7c9b85116983, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Brass Clean
-    second: {fileID: 2100000, guid: 8e724108404e457439eafe60ebeb4acc, type: 2}
+    second: {fileID: 2100000, guid: c20b9905de4825a42b2a933cc5ad47cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -162,8 +169,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -187,6 +192,7 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 0
     importBlendShapes: 0
     importCameras: 0
@@ -214,6 +220,7 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -246,14 +253,9 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 204933
-  packageName: DevDen ArchViz Vol 1 - Scotland URP
-  packageVersion: 1.1
-  assetPath: Assets/DevDen Arch Viz Scotland/Models/Study Room/Pen.FBX
-  uploadId: 674786
