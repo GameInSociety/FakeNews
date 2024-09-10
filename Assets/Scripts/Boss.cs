@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using JetBrains.Annotations;
 using System.Linq;
+using UnityEditor.ShaderKeywordFilter;
 
 public class Boss : Interactable
 {
@@ -59,31 +60,40 @@ public class Boss : Interactable
     bool finished = false;
     private void Update() {
         if (dialog_speaking) {
+            UpdateDialog();
+        }
+    }
+    bool typing = false;
+    void UpdateDialog() {
+        // typing
+        if (finished) {
+            clickFeedback.SetActive(true);
+            if (Input.GetMouseButtonDown(0))
+                NextDialog();
+        } else {
             typeTimer += Time.deltaTime;
-            if ( typeTimer >= typeRate) {
+            if (Input.GetMouseButtonDown(0)) {
+                finished = true;
+                typeIndex = dialogs[dialogIndex].Length;
+                uiText.text = dialogs[dialogIndex];
+                return;
+            }
+            if (typeTimer >= typeRate) {
                 typeIndex += typeCount;
-                finished = typeIndex >= dialogs[dialogIndex].Length;
-                if ( typeIndex >= dialogs[dialogIndex].Length) {
+                if (typeIndex >= dialogs[dialogIndex].Length) {
+                    finished = true;
+                    typeIndex = dialogs[dialogIndex].Length;
                     uiText.text = dialogs[dialogIndex];
                 } else {
                     uiText.text = dialogs[dialogIndex].Remove(typeIndex);
                 }
                 typeTimer = 0f;
             }
-            clickFeedback.SetActive(finished);
-
-            dialog_timer += Time.deltaTime;
-            if (Input.GetMouseButtonDown(0)) {
-                if (finished) {
-        typeIndex = 0;
-                    uiText.text = "";
-                    dialog_speaking = false;
-                    NextDialog();
-                } else {
-                    typeIndex = dialogs[dialogIndex].Length;
-                }
-            }
+            clickFeedback.SetActive(false);
         }
+
+        dialog_timer += Time.deltaTime;
+        
     }
 
     // interaction
@@ -144,8 +154,6 @@ public class Boss : Interactable
         photo.GetComponent<Rigidbody>().isKinematic = true;
         photo.transform.DORotateQuaternion(photo_anchor.rotation, 0.5f);
         photo.transform.DOMove(photo_anchor.position, 0.5f);
-
-        StartDialog(phrase_PhotoCheck);
 
         submittedPhoto = photo;
 
@@ -238,51 +246,50 @@ public class Boss : Interactable
     /// dialgoues
     /// </summary>
     /// <param name="str"></param>
-    string[] dialogs;
+    public List<string> dialogs = new List<string>();
     public Transform cameraAnchor;
     public int dialogIndex;
     public void StartDialog(string str) {
+        if (dialog_speaking) {
+        Debug.Log($"Double Dialogu: {str}");
+        }
+
         Debug.Log($"Starting Dialoge : {str}");
         able = false;
         dialog_group.transform.localScale = Vector3.zero;
         dialog_group.DOFade(1f, 0.15f);
-        var tmpdiags = str.Split(". ").ToList();
-        if ( tmpdiags.Count == 1) {
-            dialogs = tmpdiags.ToArray();
-        } else {
-            tmpdiags.RemoveAt(tmpdiags.Count - 1);
-            dialogs = tmpdiags.ToArray();
-        }
+        dialogs = str.Split(". ").ToList();
+        if ( dialogs.Count > 1)
+            dialogs.RemoveAt(dialogs.Count - 1);
+
         Menu.Instance.Pause();
-        dialogIndex = -1;
+        dialogIndex = 0;
         Camera.main.transform.DOMove(cameraAnchor.position, 1f);
         Camera.main.transform.DORotateQuaternion(cameraAnchor.rotation, 1f);
-        Invoke("NextDialog", 1f);
+        CancelInvoke("SpeakCurrentDialog");
+        CancelInvoke("EndDialogDelay");
+        Invoke("SpeakCurrentDialog", 1f);
+    }
+
+    public void SpeakCurrentDialog() {
+        dialog_speaking = true;
+        finished = false;
+        typeIndex = 0;
+        uiText.text = "";
+        dialog_timer = 0f;
+        typeTimer = 0f;
+        clickFeedback.SetActive(false);
+        dialog_group.transform.DOScale(1.1f, 0.2f).SetEase(Ease.OutBounce);
+        dialog_group.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear).SetDelay(0.2f);
     }
 
     public void NextDialog() {
-        dialog_speaking = false;
-        typeIndex = 0;
-        uiText.text = "";
-        Invoke("NextDialogDelay", 000f);
-    }
-    void NextDialogDelay() {
-        clickFeedback.SetActive(false);
-        typeIndex = 0;
-        dialog_group.transform.DOScale(1.1f, 0.2f).SetEase(Ease.OutBounce);
-        dialog_group.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear).SetDelay(0.2f);
         ++dialogIndex;
-        if (dialogIndex == dialogs.Length) {
+        if (dialogIndex == dialogs.Count) {
             EndDialog();
             return;
         }
-        dialog_timer = 0f;
-        typeTimer = 0f;
-        Invoke("He", 0f);
-    }
-    void He() {
-        dialog_speaking = true;
-
+        SpeakCurrentDialog();
     }
 
     public Vector3 camera_initpos;
@@ -292,15 +299,13 @@ public class Boss : Interactable
         dialog_group.transform.DOScale(0f, 0.5f).SetEase(Ease.InBounce);
         dialog_group.DOFade(0f, 0.5f);
         uiText.text = "";
-        dialog_speaking = false;
 
         Invoke("EndDialogDelay", 1f);
     }
 
     void EndDialogDelay() {
+        dialog_speaking = false;
         Menu.Instance.Resume();
-        able = true;
-
     }
 
 }

@@ -39,13 +39,18 @@ public class Menu : MonoBehaviour
         CameraBehavior.Instance._animator.gameObject.SetActive(false);
         CameraBehavior.Instance.Camera_Exit();
         FirstPersonController.instance.TurnToTarget(Boss.Instance.transform.position + Vector3.up * decal);
+        menu_group.DOKill();
+        pause_group.DOKill();
         menu_group.DOFade(0f, 1f);
         pause_group.DOFade(1f, 1f);
     }
 
     public void Resume() {
+        menu_group.DOKill();
+        pause_group.DOKill();
         menu_group.DOFade(1f, 1f);
         pause_group.DOFade(0f, 1f);
+        CancelInvoke("ResumeDelay");
         Invoke("ResumeDelay", 1f);
     }
     void ResumeDelay() {

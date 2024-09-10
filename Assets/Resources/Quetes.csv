@@ -1,40 +1,33 @@
-"ID QUEST Jour 1 _QUEST1 Jour 2","Nom de la quête Home Sweet Home ","Nom de ""l'article"" fini Un repos bien mérité ! ","Dialogues début ","Dialogues fin ","Indices Rien de mieux que d'être assis devant la télé avec une bonne boisson chaude ! ","[ITEM1] _tea ","Value ","[ITEM2] _tv ","Value ","[ITEM3] ","Value ","[ITEM4] ","Value ","","","","","","","","","","","","","","",""
-"_QUEST2 ","Un nouvelle italien !","Chez Tony, les meilleurs pâtes de votre région !","Bonjour, je suis Flatty John, votre serviteur. Nous sommes ravis de vous accueillir parmi nous. Si vous l’acceptez, nous serions enchantés de vous donner de nouvelles missions. Vos talents sont remarquables. Wololo
-Un de nos clients, Joe Pasta, nous a commandé une campagne de communication autour de leur livraison de pâtes. Il souhaiterait que vous réalisiez une belle photo de ses pâtes depuis chez vous. 
-Cela doit être authentique como a la casa. 
-Revenez me voir dès que vous êtes fiers de vous.
-","Excellent ! L’Italie est dans votre assiette. Revenez demain si vous souhaitez continuer.","J'adore allez chez Tony leur pates sont incroyables !","_pasta","10","_cartonjoepasta","150","","","","","","","","","","","","","","","","","","",""
-"Jour 3","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
-"_QUEST3","Scandale chez Tony !","Des insectes dans leurs plats ?!","Wololo. Le succès de votre post a été EX-TRA-OR-DI-NAIRE. Regardez sur l’écran. 
-Mais nous avons remarqué une trend qui monte de manière spectaculaire : le problème sanitaire de chez Joe Pasta fait encore plus le buzz. 
+"ID QUEST _QUEST1","Nom de la quête Home Sweet Home","Nom de ""l'article"" fini Un repos bien mérité ! ","Dialogues début ","Dialogues fin ","Indices Rien de mieux que d'être assis devant la télé avec une bonne boisson chaude !","[ITEM1] _tea","Value ","[ITEM2] _tv","Value ","[ITEM3] ","Value ","[ITEM4] ","Value "
+"_QUEST2 ","Un nouvel italien !","Chez Tony, les meilleures pâtes de votre région ! ","Bonjour, je suis Flatty John, à votre service. Nous sommes ravis de vous accueillir parmi nous. Si vous l’acceptez, nous serions enchantés de vous confier de nouvelles missions. Vos talents sont remarquables, Wololo ! 
+Un de nos clients, Joe Pasta, nous a commandé une campagne de communication autour de leur service de livraison de pâtes. Il souhaiterait que vous réalisiez une belle photo de ses pâtes depuis chez vous. 
+Cela doit être authentique, comme à la maison. 
+Revenez me voir dès que vous êtes satisfait de votre travail. ","Excellent ! L’Italie est dans votre assiette. Revenez demain si vous souhaitez continuer. ","J'adore aller chez Tony leurs pâtes sont incroyables ! ","_pasta","10","_cartonjoepasta","150","","","",""
+"_QUEST3","Scandale chez Tony !","Des insectes dans leurs plats ?! ","Wololo ! Le succès de votre post a été EX-TRA-OR-DI-NAIRE. Regardez l’écran ! 
+Cependant, nous avons remarqué une tendance qui monte de manière spectaculaire : le problème sanitaire chez Joe Pasta fait encore plus le buzz. 
 Nous avons une nouvelle demande. Vous avez encore votre plat de pâtes ? 
-Hmmm. Faites moi une belle photo dégoûtante. Avec un nuisible par exemple ?
-","Même moi ça me dégoute ! Prendre cette photo devait être une torture, on verra demain ce que les gens en disent !","J'ai entendu du dire qu'il y avait eu une inspection d'hygiène chez Tony, des cafards apparement. Mais c'est seulement une rumeur !","_pasta","10","_corkroach","150","","","","","","","","","","","","","","","","","","",""
-"Jour 4","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
-"_QUEST4","Un petit truc en plus","Des insectes à la place de la viande ?!?","Wo wo wo. PHE-NO-ME-NAL! Votre photo a réussi à fédérer deux groupes : les anti junk food mais aussi un groupe qui croit qu’on veut remplacer la viande par des insectes. 
-Ils sont super actifs. 
-On teste quelque chose?
-","Si on ne touche pas tout le monde avec cette photo c'est que le monde marche sur la tête ! Revenez demain pour continuer.
-","En soit ta photo d'hier pourrait fonctionner mais il en faudrait plus.","_pasta","","_corkroach","","_corkroach","","","","","","","","","","","","","","","","","",""
-"Jour 5","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
-"_QUEST5","Sale temps pour les insectes","Les élites vous mentent !","“Bon, là cela devient très intéressant. Votre cliché est présenté comme la preuve de la volonté des élites de nous faire manger des insectes pour lutter contre le réchauffement climatique. 
-Je crois qu’on peut les exciter un peu.
-","Ce qui est sûr c'est que je n'en mangerais pas personnellement ! Nous verrons demain le résultats de ton travail. ","Il faut quelque chose pour montrer que le réchauffement climatique est le lien !","_pasta","","_corkroach","","_posterclimatic","","","","","","","","","","","","","","","","","",""
-"Jour 6","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
-"_QUEST6","Ils élèvent des insectes sous nos maisons","Ils ont raisons ! On va être contrôlé !","Oulha lha. Quelle histoire ! J’ai trouvé ce groupe qui dénonce l’existence d’un grand réseau souterrain dans lequel les élites élèvent des cafards mutant en masse. En réalité, c’est un grand projet pour nous chipper tous. 
-Tu manges un cafard, une microchip se déploie pour qu’ils nous contrôlent.
-Je crois qu’au bout de la rue on pourrait faire un photo sympa
-","Qu'est-ce que les gens peuvent être crédule ! Mais avec des photos comme les votres je pourrais presque y croire aussi ! Revenez demain","Il doit y avoir une bouche d'égout au fond de la rue.","_corkroach","","_sewer","","","","","","","","","","","","","","","","","","","",""
-"Jour 7","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
-"_QUEST7","Cafard from hell","Les élites aussi sont contôlé par quelque chose dans l'ombre !","OK.Wololo. Nous avons le filon. Les gens A-DO-RENT. Certains disent même que le diable pourrait être lier à toutes ses histoires !
+Hmmm... Faites-moi une belle photo bien dégoûtante. Avec un nuisible, par exemple ? 
+
+","Même moi, ça me dégoûte ! Prendre cette photo devait être une vraie torture. On verra demain ce que les gens en pensent ! ","J'ai entendu du dire qu'il y avait eu une inspection d'hygiène chez Tony, des cafards apparement. Mais c'est seulement une rumeur ! ","_pasta","10","_corkroach","150","","","",""
+"_QUEST4","Un petit truc en plus","Des insectes à la place de la viande ?!? ","Wo wo wo. PHE-NO-ME-NAL ! Votre photo a réussi à rassembler deux groupes : les anti junk food, mais aussi ceux qui croient que nous voulons remplacer la viande par des insectes. 
+Ils sont hyper actifs ! 
+On tente quelque chose ? 
+
+
+","Si cette photo ne touche pas tout le monde, c'est que le monde marche vraiment sur la tête ! Revenez demain pour continuer. ","En soit ta photo d'hier pourrait fonctionner mais il en faudrait plus.  ","_pasta","","_corkroach","","_corkroach","","",""
+"_QUEST5","Sale temps pour les insectes","Les élites vous mentent ! ","Bon, là, ça devient vraiment intéressant. Votre cliché est désormais présenté comme une preuve de la volonté des élites de nous faire manger des insectes pour lutter contre le réchauffement climatique. 
+Je pense qu'on peut les titiller un peu, non ? ","Ce qui est certain, c'est que je n'en mangerais pas personnellement ! Nous verrons demain le résultat de ton travail. ","Il faut quelque chose pour montrer que le réchauffement climatique est le lien ! ","_pasta","","_corkroach","","_posterclimatic","","",""
+"_QUEST6","Ils élèvent des insectes sous nos maisons","Ils ont raison ! On va être contrôlés ! ","Oulha lha, quelle histoire ! J’ai trouvé un groupe qui dénonce l’existence d’un vaste réseau souterrain où les élites élèveraient en masse des cafards mutants. En réalité, il s'agirait d’un grand projet pour nous asservir tous. 
+Tu manges un cafard, et une micro-puce se déploie pour qu'ils puissent nous contrôler. 
+Je pense qu’au bout de la rue, on pourrait faire une photo sympa. ","Les gens peuvent être tellement crédules ! Mais avec des photos comme les vôtres, je pourrais presque y croire moi aussi ! Revenez demain. ","Il doit y avoir une bouche d'égout au fond de la rue. ","_corkroach","","_sewer","","","","",""
+"_QUEST7","Cafard from hell","Les élites aussi sont contôlés par quelque chose dans l'ombre ! ","OK.Wololo. Nous avons le filon. Les gens A-DO-RENT. Certains disent même que le diable pourrait être lier à toutes ses histoires ! 
 Mais nous allons avoir besoin de plus de matériel. Je te propose de passer dans notre hangar rempli d’ustensiles, costumes et éléments de décor. 
-On pourrait tester le coup des sataniques
-","Comme on dit, le ridicule ne tue pas mais au moins maintenant, on les a dans la poche ! Et je suis sûr que si l'on continue comme ça, on les controlera comme des petits chiens ! Revenez demain pour continuer votre travail.","Je crois qu'il doit nous rester un cercle satanique quelque part.","_corkroach","","_satan_cercle","","","","","","","","","","","","","","","","","","","",""
-"Jour 8","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+On pourrait tester le coup des sataniques. 
+","Comme on dit, le ridicule ne tue pas, mais au moins maintenant, on les a dans la poche !  Je suis sûr que si on continue comme ça, on les contrôlera comme des petits chiens ! Revenez demain pour poursuivre votre mission. ","Je crois qu'il doit nous rester un cercle satanique quelque part. ","_corkroach","","_satan_cercle","","","","",""
 "_QUEST8","Le comité de résistance
-","","Le CDR : “A ton attention. 
-Nous avons remarqué.
-Ils te contrôlent.  
+","","Le CDR : ""À ton attention. 
+Nous avons observé. 
+Ils te contrôlent. 
 Nous pouvons t’aider. 
-Nous avons besoin d’une preuve.
-Elle se trouve dans le bureau”","","","","","","","","","","","","","","","","","","","","","","","","",""
+Nous avons besoin d’une preuve. 
+Elle se trouve dans le bureau."" ","","","","","","","","","",""

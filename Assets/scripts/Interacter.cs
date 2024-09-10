@@ -40,15 +40,16 @@ public class Interacter : MonoBehaviour
     public Vector3 delta;
     public float rotateSpeed = 100f;
     public float distanceSpeed = 100f;
+    float currentDistance = 0f;
 
 
 
     // Update is called once per frame
     void Update()
     {
-            target.Translate(Vector3.forward * distanceSpeed * Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime);
         if (holdingItem) {
             currentInteractable.transform.position = Vector3.Lerp(currentInteractable.transform.position, target.position, speed * Time.deltaTime);
+            //target.Translate(Vector3.forward * distanceSpeed * Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime);
 
 
             /*if (!currentItem.turnToCam) {
